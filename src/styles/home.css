@@ -1,0 +1,26 @@
+.wrapper {
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+  font-size: 20px;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.selectField,
+.select {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.select {
+  width: 45%;
+  height: 400px;
+  flex-direction: column;
+  border: 1px solid black;
+}
+.button {
+  align-self: center;
+  width: 40%;
+  height: 40px;
+}
