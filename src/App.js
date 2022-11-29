@@ -1,9 +1,11 @@
-import Home from "./pages/Home";
+// import Home from "./pages/Home";
+import Request from "./pages/Request";
 function App() {
   return (
     <div>
       <header>NBRLYU</header>
-      <Home />
+      {/* <Home /> */}
+      <Request />
     </div>
   );
 }
