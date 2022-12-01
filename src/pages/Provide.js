@@ -5,6 +5,7 @@ function Provide() {
       <form action="">
         <fieldset>
           <label htmlFor="">Enter your zipcode</label>
+          <input type="text" />
         </fieldset>
         <fieldset>
           <label htmlFor="">

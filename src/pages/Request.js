@@ -42,7 +42,7 @@ function Request() {
           <input type="email" required />
         </fieldset>
         <fieldset>
-          <label htmlFor="">Upload photo (jpeg., tiff., png.) 🖇️</label>
+          <label htmlFor="">Upload photo (jpeg., tiff., png.) 📎</label>
         </fieldset>
       </form>
       <button>Submit</button>
