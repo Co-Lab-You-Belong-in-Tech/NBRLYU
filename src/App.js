@@ -3,17 +3,21 @@
 // import firebase from "./firebase";
 // import { Routes, Route } from "react-router-dom";
 // import { useEffect } from "react";
-
+import { useState } from "react";
 import Home from "./pages/Home";
 import Request from "./pages/Request";
 import Provide from "./pages/Provide";
+import React from "react";
 function App() {
   const [selectedRequest, setSelectedRequest] = useState(false);
   const [selectedProvide, setSelectedProvide] = useState(false);
   return (
     <div>
       <header>NBRLYU</header>
-      <Home />
+      <Home
+        setSelectedRequest={setSelectedRequest}
+        setSelectedProvide={setSelectedProvide}
+      />
       {selectedRequest && <Request />}
       {selectedProvide && <Provide />}
     </div>

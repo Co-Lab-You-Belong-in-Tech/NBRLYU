@@ -1,6 +1,7 @@
+import "../styles/request.css";
 function Request() {
   return (
-    <div>
+    <div className="wrapper">
       <h2>Bask in the neighboly goodness</h2>
       <form action="">
         <label htmlFor="">

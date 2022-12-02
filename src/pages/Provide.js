@@ -1,6 +1,7 @@
+import "../styles/provide.css";
 function Provide() {
   return (
-    <div>
+    <div className="wrapper">
       <h2>Pass on the neighborly goodness</h2>
       <form action="">
         <fieldset>
