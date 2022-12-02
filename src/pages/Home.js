@@ -1,13 +1,12 @@
 import "../styles/home.css";
-import { useState } from "react";
-import { useNavigate } from "react-route-dom";
+import { useState, useNavigate } from "react";
 
 function Home() {
-  const [selectBtn, setSelectBtn] = useState(false);
-  const navigate = useNavigate();
-  const handleClick = () => {
-    navigate("/request");
-  };
+  // const [selectBtn, setSelectBtn] = useState(false);
+  // const navigate = useNavigate();
+  // const handleClick = () => {
+  //   navigate("/request");
+  // };
 
   return (
     <div className="wrapper">
@@ -15,13 +14,13 @@ function Home() {
       <div className="selectField">
         <div className="select">
           <h3>pass on the neighborly goodness</h3>
-          <button className="button" onClick={handleClick}>
+          <button className="button" onClick={handleProvide}>
             Give Help
           </button>
         </div>
         <div className="select">
           <h3>Bask in the neighborly goodness</h3>
-          <button className="button" onClick={handleClick}>
+          <button className="button" onClick={handleRequest}>
             Request Help
           </button>
         </div>
