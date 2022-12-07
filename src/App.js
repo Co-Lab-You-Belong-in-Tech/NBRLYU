@@ -15,12 +15,24 @@ function App() {
   return (
     <div>
       <header>NBRLYU</header>
-      <Home
-        setSelectedRequest={setSelectedRequest}
-        setSelectedProvide={setSelectedProvide}
-      />
-      {selectedRequest && <Request />}
-      {selectedProvide && <Provide />}
+      {selectedRequest || selectedProvide ? null : (
+        <Home
+          setSelectedRequest={setSelectedRequest}
+          setSelectedProvide={setSelectedProvide}
+        />
+      )}
+      {selectedRequest && (
+        <Request
+          setSelectedRequest={setSelectedRequest}
+          setSelectedProvide={setSelectedProvide}
+        />
+      )}
+      {selectedProvide && (
+        <Provide
+          setSelectedRequest={setSelectedRequest}
+          setSelectedProvide={setSelectedProvide}
+        />
+      )}
       <Footer />
     </div>
   );

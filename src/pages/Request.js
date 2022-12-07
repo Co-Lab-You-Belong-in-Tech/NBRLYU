@@ -1,5 +1,10 @@
 import "../styles/request.css";
-function Request() {
+
+function Request({ setSelectedProvide, setSelectedRequest }) {
+  const handleCancel = () => {
+    setSelectedRequest(false);
+    setSelectedProvide(false);
+  };
   return (
     <div className="wrapper">
       <h2>Bask in the neighboly goodness</h2>
@@ -47,7 +52,7 @@ function Request() {
         </fieldset>
       </form>
       <button>Submit</button>
-      <button>Cancel</button>
+      <button onClick={handleCancel}>Cancel</button>
     </div>
   );
 }

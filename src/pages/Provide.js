@@ -1,5 +1,9 @@
 import "../styles/provide.css";
-function Provide() {
+function Provide({ setSelectedProvide, setSelectedRequest }) {
+  const handleCancel = () => {
+    setSelectedRequest(false);
+    setSelectedProvide(false);
+  };
   return (
     <div className="wrapper">
       <h2>Pass on the neighborly goodness</h2>
@@ -28,7 +32,7 @@ function Provide() {
         </fieldset>
       </form>
       <button>Submit</button>
-      <button>Cancel</button>
+      <button onClick={handleCancel}>Cancel</button>
     </div>
   );
 }
