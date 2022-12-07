@@ -3,11 +3,12 @@
 // import firebase from "./firebase";
 // import { Routes, Route } from "react-router-dom";
 // import { useEffect } from "react";
+import React from "react";
 import { useState } from "react";
 import Home from "./pages/Home";
 import Request from "./pages/Request";
 import Provide from "./pages/Provide";
-import React from "react";
+import Footer from "./pages/Footer";
 function App() {
   const [selectedRequest, setSelectedRequest] = useState(false);
   const [selectedProvide, setSelectedProvide] = useState(false);
@@ -20,6 +21,7 @@ function App() {
       />
       {selectedRequest && <Request />}
       {selectedProvide && <Provide />}
+      <Footer />
     </div>
   );
 }
