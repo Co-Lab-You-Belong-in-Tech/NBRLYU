@@ -1,6 +1,12 @@
-function Request() {
+import "../styles/request.css";
+
+function Request({ setSelectedProvide, setSelectedRequest }) {
+  const handleCancel = () => {
+    setSelectedRequest(false);
+    setSelectedProvide(false);
+  };
   return (
-    <div>
+    <div className="wrapper">
       <h2>Bask in the neighboly goodness</h2>
       <form action="">
         <label htmlFor="">
@@ -46,8 +52,13 @@ function Request() {
         </fieldset>
       </form>
       <button>Submit</button>
-      <button>Cancel</button>
+      <button onClick={handleCancel}>Cancel</button>
     </div>
   );
 }
 export default Request;
+
+//? Pseudo Code
+//? the form will need to be stored in a database
+//? the zip code should be used as a search parameter
+//? the chore category should be used as another search parameter
