@@ -70,3 +70,8 @@ export default App;
 
       <Route path="/provide" element={<Provide />} /> */
 }
+
+//TODO: Add Routes and Route
+//TODO: Add Sitemap for SEO
+//TODO: Add firebase
+//TODO: Use Checkbox for multiple selections from provider side
