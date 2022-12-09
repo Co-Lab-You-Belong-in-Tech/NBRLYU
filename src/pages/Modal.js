@@ -13,6 +13,7 @@ function Modal() {
           If no one picks up your chore, your request will be deleted after 10
           days.
         </p>
+        <button className="btn modal-class">Close</button>
       </div>
     </div>
   );

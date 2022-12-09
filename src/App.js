@@ -9,7 +9,7 @@ import Home from "./pages/Home";
 import Request from "./pages/Request";
 import Provide from "./pages/Provide";
 import Footer from "./pages/Footer";
-import Modal from "./pages/Modal";
+
 function App() {
   const [selectedRequest, setSelectedRequest] = useState(false);
   const [selectedProvide, setSelectedProvide] = useState(false);
@@ -34,7 +34,7 @@ function App() {
           setSelectedProvide={setSelectedProvide}
         />
       )}
-      <Modal />
+
       <Footer />
     </div>
   );
