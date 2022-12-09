@@ -50,9 +50,9 @@ function Request({ setSelectedProvide, setSelectedRequest }) {
         <fieldset>
           <label htmlFor="">Upload photo (jpeg., tiff., png.) 📎</label>
         </fieldset>
+        <button>Submit</button>
+        <button onClick={handleCancel}>Cancel</button>
       </form>
-      <button>Submit</button>
-      <button onClick={handleCancel}>Cancel</button>
     </div>
   );
 }
