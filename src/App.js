@@ -3,6 +3,7 @@
 // import firebase from "./firebase";
 // import { Routes, Route } from "react-router-dom";
 // import { useEffect } from "react";
+import "./App.scss";
 import React from "react";
 import { useState } from "react";
 import Home from "./pages/Home";
@@ -15,7 +16,6 @@ function App() {
   const [selectedProvide, setSelectedProvide] = useState(false);
   return (
     <div>
-      <header>NBRLYU</header>
       {selectedRequest || selectedProvide ? null : (
         <Home
           setSelectedRequest={setSelectedRequest}
