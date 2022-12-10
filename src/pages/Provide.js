@@ -1,4 +1,3 @@
-import "../styles/provide.css";
 function Provide({ setSelectedProvide, setSelectedRequest }) {
   const handleCancel = () => {
     setSelectedRequest(false);

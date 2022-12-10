@@ -1,4 +1,6 @@
-import "../styles/home.css";
+import landing from "../assets/landing.svg";
+import logo from "../assets/logo.png";
+
 // import { useState, useNavigate } from "react";
 
 function Home({ setSelectedProvide, setSelectedRequest }) {
@@ -20,19 +22,31 @@ function Home({ setSelectedProvide, setSelectedRequest }) {
 
   return (
     <div className="wrapper">
-      <h2>A network to give and receive neighborly help</h2>
-      <div className="selectField">
-        <div className="select">
-          <h3>Pass on the neighborly goodness</h3>
-          <button className="button" onClick={handleProvide}>
-            Give Help
-          </button>
+      <header>
+        <img src={logo} alt="NBRLYU logo" />
+        <h1>Neighbors helping neighbors</h1>
+      </header>
+      <div className="main-container">
+        <div className="text-box">
+          <p>
+            A network to give and receive neighborly help. Improve your sense of
+            community by providing help or asking for help.
+          </p>
+          <div className="button-box">
+            <button className="button" onClick={handleProvide}>
+              Give Help
+            </button>
+
+            <button className="button" onClick={handleRequest}>
+              Request Help
+            </button>
+          </div>
         </div>
-        <div className="select">
-          <h3>Bask in the neighborly goodness</h3>
-          <button className="button" onClick={handleRequest}>
-            Request Help
-          </button>
+        <div className="image-box">
+          <img
+            src={landing}
+            alt="graphics of neighbours gather to help each other"
+          />
         </div>
       </div>
     </div>

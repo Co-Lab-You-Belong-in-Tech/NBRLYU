@@ -3,18 +3,19 @@
 // import firebase from "./firebase";
 // import { Routes, Route } from "react-router-dom";
 // import { useEffect } from "react";
+import "./App.scss";
 import React from "react";
 import { useState } from "react";
 import Home from "./pages/Home";
 import Request from "./pages/Request";
 import Provide from "./pages/Provide";
 import Footer from "./pages/Footer";
+
 function App() {
   const [selectedRequest, setSelectedRequest] = useState(false);
   const [selectedProvide, setSelectedProvide] = useState(false);
   return (
     <div>
-      <header>NBRLYU</header>
       {selectedRequest || selectedProvide ? null : (
         <Home
           setSelectedRequest={setSelectedRequest}
@@ -33,6 +34,7 @@ function App() {
           setSelectedProvide={setSelectedProvide}
         />
       )}
+
       <Footer />
     </div>
   );
@@ -70,3 +72,8 @@ export default App;
 
       <Route path="/provide" element={<Provide />} /> */
 }
+
+//TODO: Add Routes and Route
+//TODO: Add Sitemap for SEO
+//TODO: Add firebase
+//TODO: Use Checkbox for multiple selections from provider side

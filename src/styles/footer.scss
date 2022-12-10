@@ -1,0 +1,11 @@
+.footer {
+  text-align: center;
+  color: $text;
+  background-color: $footerBg;
+  height: 10vh;
+  display: flex;
+  flex-direction: column;
+  p {
+    justify-content: center;
+  }
+}

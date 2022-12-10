@@ -1,10 +1,9 @@
+// import logo from "../assets/logo.png";
 function Footer() {
   return (
     <div className="footer">
-      <p>
-        NbrlyU is voluntary help website that works by connecting people who
-        live within a 5 mile radius...
-      </p>
+      {/* <img src={logo} alt="NBRLYU logo" /> */}
+      <p>✨ created by team NBRLYU @Co.Lab 🚀2022 ✨</p>
     </div>
   );
 }

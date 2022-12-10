@@ -1,0 +1,16 @@
+.wrapper {
+  max-width: 1280px;
+  width: 90%;
+  margin: 0 auto;
+  height: 100vh;
+  min-height: 600px;
+}
+
+button {
+  font-family: $font;
+  font-weight: medium;
+  padding: 10px;
+  border-radius: 30px;
+  background-color: $buttonBg;
+  min-width: 150px;
+}

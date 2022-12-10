@@ -1,0 +1,34 @@
+header {
+  height: 20vh;
+  text-align: left;
+}
+img {
+  width: 10%;
+  height: 10vh;
+  background-size: contain;
+}
+.main-container {
+  display: flex;
+  height: 70vh;
+}
+
+.text-box {
+  width: 30%;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.image-box {
+  width: 70%;
+  img {
+    width: 90%;
+    height: auto;
+  }
+}
+
+.button-box {
+  display: flex;
+  justify-content: space-evenly;
+}
