@@ -1,6 +1,5 @@
 import landing from "../assets/landing.svg";
-import logo from "../assets/logo.png";
-
+import Header from "../components/Header";
 // import { useState, useNavigate } from "react";
 
 function Home({ setSelectedProvide, setSelectedRequest }) {
@@ -22,10 +21,7 @@ function Home({ setSelectedProvide, setSelectedRequest }) {
 
   return (
     <div className="wrapper">
-      <header>
-        <img src={logo} alt="NBRLYU logo" />
-        <h1>Neighbors helping neighbors</h1>
-      </header>
+      <Header />
       <div className="main-container">
         <div className="text-box">
           <p>

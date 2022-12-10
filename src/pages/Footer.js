@@ -3,7 +3,7 @@ function Footer() {
   return (
     <div className="footer">
       {/* <img src={logo} alt="NBRLYU logo" /> */}
-      <p>✨ created by team NBRLYU @Co.Lab 🚀2022 ✨</p>
+      <p>✨ Created by Team NBRLYU @Co.Lab 🚀2022 ✨</p>
     </div>
   );
 }

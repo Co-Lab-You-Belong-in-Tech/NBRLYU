@@ -5,7 +5,9 @@
   height: 100vh;
   min-height: 600px;
 }
-
+fieldset {
+  border: none;
+}
 button {
   font-family: $font;
   font-weight: medium;
