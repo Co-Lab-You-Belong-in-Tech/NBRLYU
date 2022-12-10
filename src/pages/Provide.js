@@ -1,4 +1,8 @@
+import cooking from "../assets/cooking.jpg";
+import cleaning from "../assets/cleaning.jpg";
+import yard from "../assets/yard.jpg";
 import Header from "../components/Header";
+
 function Provide({ setSelectedProvide, setSelectedRequest }) {
   const handleCancel = () => {
     setSelectedRequest(false);
@@ -9,28 +13,37 @@ function Provide({ setSelectedProvide, setSelectedRequest }) {
       <Header />
       <h2>Pass on the neighborly goodness</h2>
       <h3>Help your neighbor in your area of expertise</h3>
-      <form action="">
-        <fieldset>
+      <form>
+        <fieldset className="zip-code">
           <label htmlFor="">Enter your zipcode</label>
           <input type="text" />
         </fieldset>
-        <fieldset>
-          <label htmlFor="">
-            Select a task category (Or more if you have the time)
-          </label>
-
-          <a>
-            <p>🍳</p>
-            <p>Cooking</p>
-          </a>
-          <a>
-            <p>🧹</p>
-            <p>Cleaning</p>
-          </a>
-          <a>
-            <p>🍂</p>
-            <p>Yard Work</p>
-          </a>
+        <fieldset className="task-category">
+          <p>Select a task category</p>
+          <p>(Or more if you have the time)</p>
+          <div className="task-choices">
+            <div className="each-task">
+              <input type="checkbox" />
+              <label htmlFor="">
+                <img src={cooking} alt="graphic of cooking" />
+                <p>Cooking</p>
+              </label>
+            </div>
+            <div className="each-task">
+              <input type="checkbox" />
+              <label htmlFor="">
+                <img src={cleaning} alt="graphic of cleaning" />
+                <p>Cleaning</p>
+              </label>
+            </div>
+            <div className="each-task">
+              <input type="checkbox" />
+              <label htmlFor="">
+                <img src={yard} alt="graphic of yard work" />
+                <p>Yard Work</p>
+              </label>
+            </div>
+          </div>
         </fieldset>
       </form>
       <button>Submit</button>
