@@ -1,4 +1,6 @@
-import charity from "../assets/charity.jpg";
+import landing from "../assets/landing.svg";
+import logo from "../assets/logo.png";
+
 // import { useState, useNavigate } from "react";
 
 function Home({ setSelectedProvide, setSelectedRequest }) {
@@ -20,8 +22,15 @@ function Home({ setSelectedProvide, setSelectedRequest }) {
 
   return (
     <div className="wrapper">
+      <header>
+        <img src={logo} alt="NBRLYU logo" />
+        <h1>Neighbors helping neighbors</h1>
+      </header>
       <div className="textBox">
-        <h2>A network to give and receive neighborly help</h2>
+        <p>
+          A network to give and receive neighborly help. Improve your sense of
+          community by providing help or asking for help.
+        </p>
 
         <button className="button" onClick={handleProvide}>
           Give Help
@@ -33,7 +42,7 @@ function Home({ setSelectedProvide, setSelectedRequest }) {
       </div>
       <div className="imageBox">
         <img
-          src={charity}
+          src={landing}
           alt="graphics of neighbours gather to help each other"
         />
       </div>
