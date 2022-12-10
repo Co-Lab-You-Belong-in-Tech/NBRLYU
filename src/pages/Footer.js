@@ -1,10 +1,7 @@
 function Footer() {
   return (
     <div className="footer">
-      <p>
-        NbrlyU is voluntary help website that works by connecting people who
-        live within a 5 mile radius...
-      </p>
+      <p>✨ created by NBRLYU team @Co.Lab 🚀2022 ✨</p>
     </div>
   );
 }

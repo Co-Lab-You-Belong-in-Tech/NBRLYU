@@ -1,5 +1,5 @@
-import "../styles/modal.css";
 function Modal() {
+  const handleClose = () => {};
   return (
     <div className="modal-wrap display-none">
       <div className="modal">
@@ -13,7 +13,14 @@ function Modal() {
           If no one picks up your chore, your request will be deleted after 10
           days.
         </p>
-        <button className="btn modal-class">Close</button>
+        <button
+          className="btn modal-class"
+          onClick={() => {
+            //! I need to toggle the css visibility class here to make the Modal page go away on click the button
+          }}
+        >
+          Close
+        </button>
       </div>
     </div>
   );

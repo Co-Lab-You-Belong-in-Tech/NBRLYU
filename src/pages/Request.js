@@ -1,4 +1,3 @@
-import "../styles/request.css";
 import { useState } from "react";
 import Modal from "./Modal";
 
@@ -61,7 +60,7 @@ function Request({ setSelectedProvide, setSelectedRequest }) {
           <button onClick={handleCancel}>Cancel</button>
         </form>
       </div>
-      {submitReq ? <Modal /> : null}
+      {submitReq ? <Modal setSubmitReq={setSubmitReq} /> : null}
     </div>
   );
 }
