@@ -1,3 +1,4 @@
+import Header from "../components/Header";
 function Provide({ setSelectedProvide, setSelectedRequest }) {
   const handleCancel = () => {
     setSelectedRequest(false);
@@ -5,7 +6,9 @@ function Provide({ setSelectedProvide, setSelectedRequest }) {
   };
   return (
     <div className="wrapper">
+      <Header />
       <h2>Pass on the neighborly goodness</h2>
+      <h3>Help your neighbor in your area of expertise</h3>
       <form action="">
         <fieldset>
           <label htmlFor="">Enter your zipcode</label>
