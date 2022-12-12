@@ -13,6 +13,9 @@ function Request({ setSelectedProvide, setSelectedRequest }) {
   };
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
+  const [taskSelect, setTaskSelect] = useState("");
+  const [zipCode, setZipCode] = useState("");
+  const [email, setEmail] = useState("");
   return (
     <div className="wrapper">
       <Header />
@@ -20,16 +23,18 @@ function Request({ setSelectedProvide, setSelectedRequest }) {
       <h3>Enter your details & shoutout for neighborly help!</h3>
       <form className="request-form">
         <fieldset className="name-field">
-          <label htmlFor="">First Name ⁕</label>
+          <label htmlFor="first-name">First Name ⁕</label>
           <input
+            id="first-name"
             type="text"
             placeholder="First Name"
             value={firstName}
             onChange={(e) => setFirstName(e.target.value)}
             required
           />
-          <label htmlFor="">Last Name</label>
+          <label htmlFor="last-name">Last Name</label>
           <input
+            id="last-name"
             type="text"
             placeholder="Last Name"
             value={lastName}
@@ -37,27 +42,51 @@ function Request({ setSelectedProvide, setSelectedRequest }) {
           />
         </fieldset>
         <fieldset className="task-dropdown">
-          <label htmlFor="">Pick your task ⁕</label>
-          <select name="" id="" required>
-            <option value="" default>
+          <label htmlFor="task-list">Pick your task ⁕</label>
+          <select
+            id="task-list"
+            value={taskSelect}
+            onChange={(e) => setTaskSelect(e.target.value)}
+            required
+          >
+            <option default required>
               please pick one
             </option>
-            <option value="">yard work</option>
-            <option value="">cleaning</option>
-            <option value="">cooking</option>
+            <option>yard work</option>
+            <option>cleaning</option>
+            <option>cooking</option>
           </select>
         </fieldset>
         <fieldset className="task-description">
-          <label htmlFor="">Describe your task (150 characters)</label>
-          <textarea name="" id="" cols="5" rows="2" maxLength={150}></textarea>
+          <label htmlFor="task-detail">
+            Describe your task (150 characters)
+          </label>
+          <textarea
+            id="task-detail"
+            cols="5"
+            rows="2"
+            maxLength={150}
+          ></textarea>
         </fieldset>
         <fieldset className="zip-code">
-          <label htmlFor="">Zip Code ⁕</label>
-          <input type="text" required />
+          <label htmlFor="zip">Zip Code ⁕</label>
+          <input
+            id="zip"
+            type="text"
+            value={zipCode}
+            onChange={(e) => setZipCode(e.target.value)}
+            required
+          />
         </fieldset>
         <fieldset className="email-field">
-          <label htmlFor="">Email ⁕</label>
-          <input type="email" required />
+          <label htmlFor="email">Email ⁕</label>
+          <input
+            id="email"
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
         </fieldset>
         {/* <fieldset>
           <label htmlFor="">Upload photo (jpeg., tiff., png.) 🖇️</label>
