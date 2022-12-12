@@ -16,7 +16,7 @@ function Request({ setSelectedProvide, setSelectedRequest }) {
       <Header />
       <h2>Ask for help</h2>
       <h3>Enter your details & shoutout for neighborly help!</h3>
-      <form>
+      <form className="request-form">
         <fieldset className="name-field">
           <label htmlFor="">First Name ⁕</label>
           <input type="text" required />
