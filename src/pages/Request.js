@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Header from "../components/Header";
 import Modal from "./Modal";
 
@@ -9,13 +9,20 @@ function Request({ setSelectedProvide, setSelectedRequest }) {
     setSelectedProvide(false);
   };
   const handleSubmit = () => {
+    allowSubmit(true);
     setSubmitReq(true);
   };
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [taskSelect, setTaskSelect] = useState("");
+  const [taskDetail, setTaskDetail] = useState("");
   const [zipCode, setZipCode] = useState("");
   const [email, setEmail] = useState("");
+  const allowSubmit = () => {
+    return (
+      firstName.length && taskSelect.length && zipCode.length && email.length
+    );
+  };
   return (
     <div className="wrapper">
       <Header />
@@ -49,7 +56,7 @@ function Request({ setSelectedProvide, setSelectedRequest }) {
             onChange={(e) => setTaskSelect(e.target.value)}
             required
           >
-            <option default required>
+            <option placeholder="please pick one" required>
               please pick one
             </option>
             <option>yard work</option>
@@ -66,13 +73,15 @@ function Request({ setSelectedProvide, setSelectedRequest }) {
             cols="5"
             rows="2"
             maxLength={150}
+            value={taskDetail}
+            onChange={(e) => setTaskDetail(e.target.value)}
           ></textarea>
         </fieldset>
         <fieldset className="zip-code">
           <label htmlFor="zip">Zip Code ⁕</label>
           <input
             id="zip"
-            type="text"
+            type="zipcode"
             value={zipCode}
             onChange={(e) => setZipCode(e.target.value)}
             required
@@ -92,7 +101,9 @@ function Request({ setSelectedProvide, setSelectedRequest }) {
           <label htmlFor="">Upload photo (jpeg., tiff., png.) 🖇️</label>
         </fieldset> */}
         <div className="button-box">
-          <button onClick={handleSubmit}>Submit</button>
+          <button onClick={handleSubmit} disabled={!allowSubmit}>
+            Submit
+          </button>
           <button onClick={handleCancel}>Cancel</button>
         </div>
       </form>
