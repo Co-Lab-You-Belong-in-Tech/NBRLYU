@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Header from "../components/Header";
 import Modal from "./Modal";
 
@@ -11,6 +11,8 @@ function Request({ setSelectedProvide, setSelectedRequest }) {
   const handleSubmit = () => {
     setSubmitReq(true);
   };
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
   return (
     <div className="wrapper">
       <Header />
@@ -19,9 +21,20 @@ function Request({ setSelectedProvide, setSelectedRequest }) {
       <form className="request-form">
         <fieldset className="name-field">
           <label htmlFor="">First Name ⁕</label>
-          <input type="text" required />
+          <input
+            type="text"
+            placeholder="First Name"
+            value={firstName}
+            onChange={(e) => setFirstName(e.target.value)}
+            required
+          />
           <label htmlFor="">Last Name</label>
-          <input type="text" />
+          <input
+            type="text"
+            placeholder="Last Name"
+            value={lastName}
+            onChange={(e) => setLastName(e.target.value)}
+          />
         </fieldset>
         <fieldset className="task-dropdown">
           <label htmlFor="">Pick your task ⁕</label>
