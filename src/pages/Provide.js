@@ -11,9 +11,9 @@ function Provide({ setSelectedProvide, setSelectedRequest }) {
   return (
     <div className="wrapper">
       <Header />
-      <h2>Pass on the neighborly goodness</h2>
-      <h3>Help your neighbor in your area of expertise</h3>
       <form>
+        <h2>Pass on the neighborly goodness</h2>
+        <h3>Help your neighbor in your area of expertise</h3>
         <fieldset className="zip-code">
           <label htmlFor="">Enter your zipcode</label>
           <input type="text" />
@@ -46,8 +46,10 @@ function Provide({ setSelectedProvide, setSelectedRequest }) {
           </div>
         </fieldset>
       </form>
-      <button>Submit</button>
-      <button onClick={handleCancel}>Cancel</button>
+      <div className="button-box">
+        <button>Submit</button>
+        <button onClick={handleCancel}>Cancel</button>
+      </div>
     </div>
   );
 }

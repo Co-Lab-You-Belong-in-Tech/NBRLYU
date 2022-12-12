@@ -9,10 +9,11 @@
   display: flex;
   justify-content: center;
   label img {
-    width: 40%;
+    width: 50%;
     height: auto;
   }
 }
-button {
-  margin: 0 20px;
+.button-box {
+  display: flex;
+  justify-content: space-between;
 }
