@@ -9,7 +9,7 @@ import { useState } from "react";
 import Home from "./pages/Home";
 import Request from "./pages/Request";
 import Provide from "./pages/Provide";
-import Footer from "./pages/Footer";
+import Footer from "./components/Footer";
 
 function App() {
   const [selectedRequest, setSelectedRequest] = useState(false);

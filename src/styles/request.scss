@@ -1,9 +1,25 @@
-.wrapper {
-  max-width: 90%;
-  margin: 0 auto;
-  padding: 0;
+h2,
+h3 {
   text-align: center;
-  font-size: 20px;
+}
+form {
+  padding: 0 200px;
+  margin: 0 auto;
+}
+.name-field {
+  display: flex;
+  justify-content: space-between;
+}
+
+.task-dropdown,
+.task-description,
+.zip-code,
+.email-field {
+  display: flex;
   flex-direction: column;
+  width: 100%;
+}
+.button-box {
+  display: flex;
   justify-content: space-evenly;
 }

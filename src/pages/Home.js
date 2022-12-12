@@ -1,5 +1,6 @@
 import landing from "../assets/landing.svg";
 import Header from "../components/Header";
+
 // import { useState, useNavigate } from "react";
 
 function Home({ setSelectedProvide, setSelectedRequest }) {
@@ -24,6 +25,7 @@ function Home({ setSelectedProvide, setSelectedRequest }) {
       <Header />
       <div className="main-container">
         <div className="text-box">
+          <h1>Neighbors helping neighbors</h1>
           <p>
             A network to give and receive neighborly help. Improve your sense of
             community by providing help or asking for help.

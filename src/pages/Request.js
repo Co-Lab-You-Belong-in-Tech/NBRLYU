@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Header from "../components/Header";
 import Modal from "./Modal";
 
 function Request({ setSelectedProvide, setSelectedRequest }) {
@@ -12,54 +13,48 @@ function Request({ setSelectedProvide, setSelectedRequest }) {
   };
   return (
     <div className="wrapper">
-      <div className="form-wrapper">
-        <h2>Bask in the neighboly goodness</h2>
-        <form action="">
-          <label htmlFor="">
-            Enter your details & shoutout for neighborly help!
-          </label>
-          <fieldset>
-            <label htmlFor="">First Name</label>
-            <input type="text" required />
-            <label htmlFor="">Last Name</label>
-            <input type="text" />
-          </fieldset>
-          <fieldset>
-            <label htmlFor="">Pick your task</label>
-            <select name="" id="" required>
-              <option value="" default>
-                please pick one
-              </option>
-              <option value="">yard work</option>
-              <option value="">cleaning</option>
-              <option value="">cooking</option>
-            </select>
-          </fieldset>
-          <fieldset>
-            <label htmlFor="">Describe your task (150 characters)</label>
-            <textarea
-              name=""
-              id=""
-              cols="30"
-              rows="10"
-              maxLength={150}
-            ></textarea>
-          </fieldset>
-          <fieldset>
-            <label htmlFor="">Zip Code</label>
-            <input type="text" required />
-          </fieldset>
-          <fieldset>
-            <label htmlFor="">Email</label>
-            <input type="email" required />
-          </fieldset>
-          <fieldset>
-            <label htmlFor="">Upload photo (jpeg., tiff., png.) 📎</label>
-          </fieldset>
+      <Header />
+      <h2>Ask for help</h2>
+      <h3>Enter your details & shoutout for neighborly help!</h3>
+      <form>
+        <fieldset className="name-field">
+          <label htmlFor="">First Name ⁕</label>
+          <input type="text" required />
+          <label htmlFor="">Last Name</label>
+          <input type="text" />
+        </fieldset>
+        <fieldset className="task-dropdown">
+          <label htmlFor="">Pick your task ⁕</label>
+          <select name="" id="" required>
+            <option value="" default>
+              please pick one
+            </option>
+            <option value="">yard work</option>
+            <option value="">cleaning</option>
+            <option value="">cooking</option>
+          </select>
+        </fieldset>
+        <fieldset className="task-description">
+          <label htmlFor="">Describe your task (150 characters)</label>
+          <textarea name="" id="" cols="5" rows="2" maxLength={150}></textarea>
+        </fieldset>
+        <fieldset className="zip-code">
+          <label htmlFor="">Zip Code ⁕</label>
+          <input type="text" required />
+        </fieldset>
+        <fieldset className="email-field">
+          <label htmlFor="">Email ⁕</label>
+          <input type="email" required />
+        </fieldset>
+        {/* <fieldset>
+          <label htmlFor="">Upload photo (jpeg., tiff., png.) 🖇️</label>
+        </fieldset> */}
+        <div className="button-box">
           <button onClick={handleSubmit}>Submit</button>
           <button onClick={handleCancel}>Cancel</button>
-        </form>
-      </div>
+        </div>
+      </form>
+
       {submitReq ? <Modal setSubmitReq={setSubmitReq} /> : null}
     </div>
   );
