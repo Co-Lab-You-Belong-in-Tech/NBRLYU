@@ -1,5 +1,4 @@
 import landing from "../assets/landing.svg";
-import Header from "../components/Header";
 
 // import { useState, useNavigate } from "react";
 
@@ -22,7 +21,6 @@ function Home({ setSelectedProvide, setSelectedRequest }) {
 
   return (
     <div className="wrapper">
-      <Header />
       <div className="main-container">
         <div className="text-box">
           <h1>Neighbors helping neighbors</h1>

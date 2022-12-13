@@ -7,9 +7,11 @@ import "./App.scss";
 import React from "react";
 import { Link, Routes, Route } from "react-router-dom";
 import { useState } from "react";
+import Header from "./components/Header";
 import Home from "./pages/Home";
 import Request from "./pages/Request";
 import Provide from "./pages/Provide";
+import Modal from "./pages/Modal";
 import Footer from "./components/Footer";
 
 function App() {
@@ -21,6 +23,7 @@ function App() {
 
         <Route path="/Provide" element={<Provide />} />
         <Route path="/Request" element={<Request />} />
+        <Route path="/Modal" element={<Modal />} />
       </Routes>
       <Footer />
     </div>
