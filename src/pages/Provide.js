@@ -1,7 +1,6 @@
 import cooking from "../assets/cooking.jpg";
 import cleaning from "../assets/cleaning.jpg";
 import yard from "../assets/yard.jpg";
-import Header from "../components/Header";
 
 function Provide({ setSelectedProvide, setSelectedRequest }) {
   const handleCancel = () => {
@@ -10,7 +9,6 @@ function Provide({ setSelectedProvide, setSelectedRequest }) {
   };
   return (
     <div className="wrapper">
-      <Header />
       <form>
         <h2>Pass on the neighborly goodness</h2>
         <h3>Help your neighbor in your area of expertise</h3>

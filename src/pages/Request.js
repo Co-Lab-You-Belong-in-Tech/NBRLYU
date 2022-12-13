@@ -1,5 +1,4 @@
 import { useState } from "react";
-import Header from "../components/Header";
 import Modal from "./Modal";
 
 function Request({ setSelectedProvide, setSelectedRequest }) {
@@ -25,7 +24,6 @@ function Request({ setSelectedProvide, setSelectedRequest }) {
   };
   return (
     <div className="wrapper">
-      <Header />
       <h2>Ask for help</h2>
       <h3>Enter your details & shoutout for neighborly help!</h3>
       <form className="request-form">

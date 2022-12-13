@@ -21,3 +21,12 @@ button {
   background-color: $buttonBg;
   min-width: 150px;
 }
+a {
+  font-size: 2rem;
+  ::before {
+    color: $text;
+  }
+  ::after {
+    color: $tagline;
+  }
+}
