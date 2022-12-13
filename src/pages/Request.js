@@ -1,17 +1,10 @@
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
-import Modal from "./Modal";
-import Warning from "./Warning";
 
 function Request() {
   const navigate = useNavigate();
   const handleCancel = () => {
     navigate("/");
-  };
-  const handleSubmit = () => {
-    if (!allowSubmit) {
-      return <Warning />;
-    } else return <Modal />;
   };
 
   const [firstName, setFirstName] = useState("");
@@ -25,6 +18,12 @@ function Request() {
       firstName.length && taskSelect.length && zipCode.length && email.length
     );
   };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (!allowSubmit) {
+      navigate("/warning");
+    } else navigate("/modal");
+  };
   return (
     <div className="wrapper">
       <h2>Ask for help</h2>
@@ -36,9 +35,11 @@ function Request() {
             id="first-name"
             type="text"
             placeholder="First Name"
-            value={firstName}
-            onChange={(e) => setFirstName(e.target.value)}
             required
+            value={firstName}
+            onChange={(e) => {
+              setFirstName(e.target.value);
+            }}
           />
           <label htmlFor="last-name">Last Name</label>
           <input
@@ -57,9 +58,7 @@ function Request() {
             onChange={(e) => setTaskSelect(e.target.value)}
             required
           >
-            <option placeholder disabled required>
-              Please pick one
-            </option>
+            <option defaultValue="placeholder">Please pick one</option>
             <option>yard work</option>
             <option>cleaning</option>
             <option>cooking</option>
@@ -102,14 +101,14 @@ function Request() {
           <label htmlFor="">Upload photo (jpeg., tiff., png.) 🖇️</label>
         </fieldset> */}
         <div className="button-box">
-          <button onClick={handleSubmit} disabled={!allowSubmit}>
+          <button type="submit" onClick={handleSubmit} disabled={allowSubmit}>
             Submit
           </button>
-          <button onClick={handleCancel}>Cancel</button>
+          <button type="submit" onClick={handleCancel}>
+            Cancel
+          </button>
         </div>
       </form>
-
-      {submitReq ? <Modal setSubmitReq={setSubmitReq} /> : null}
     </div>
   );
 }
