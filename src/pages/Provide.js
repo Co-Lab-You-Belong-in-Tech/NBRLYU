@@ -1,11 +1,12 @@
+import { useNavigate } from "react-router-dom";
 import cooking from "../assets/cooking.jpg";
 import cleaning from "../assets/cleaning.jpg";
 import yard from "../assets/yard.jpg";
 
-function Provide({ setSelectedProvide, setSelectedRequest }) {
+function Provide() {
+  const navigate = useNavigate();
   const handleCancel = () => {
-    setSelectedRequest(false);
-    setSelectedProvide(false);
+    navigate("/");
   };
   return (
     <div className="wrapper">

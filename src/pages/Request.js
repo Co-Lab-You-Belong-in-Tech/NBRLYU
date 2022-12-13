@@ -1,16 +1,19 @@
+import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import Modal from "./Modal";
+import Warning from "./Warning";
 
-function Request({ setSelectedProvide, setSelectedRequest }) {
-  const [submitReq, setSubmitReq] = useState(false);
+function Request() {
+  const navigate = useNavigate();
   const handleCancel = () => {
-    setSelectedRequest(false);
-    setSelectedProvide(false);
+    navigate("/");
   };
   const handleSubmit = () => {
-    allowSubmit(true);
-    setSubmitReq(true);
+    if (!allowSubmit) {
+      return <Warning />;
+    } else return <Modal />;
   };
+
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [taskSelect, setTaskSelect] = useState("");
