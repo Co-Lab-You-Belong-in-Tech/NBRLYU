@@ -1,21 +1,15 @@
 import landing from "../assets/landing.svg";
 import { useNavigate } from "react-router-dom";
 
-function Home({ setSelectedProvide, setSelectedRequest }) {
-  // const [selectBtn, setSelectBtn] = useState(false);
-  // const navigate = useNavigate();
-  // const handleClick = () => {
-  //   navigate("/request");
-  // };
+function Home() {
+  const navigate = useNavigate();
 
   const handleProvide = () => {
-    setSelectedProvide(true);
-    setSelectedRequest(false);
+    navigate("/provide");
   };
 
   const handleRequest = () => {
-    setSelectedRequest(true);
-    setSelectedProvide(false);
+    navigate("/request");
   };
 
   return (
