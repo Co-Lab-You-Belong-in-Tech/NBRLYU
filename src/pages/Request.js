@@ -56,8 +56,8 @@ function Request({ setSelectedProvide, setSelectedRequest }) {
             onChange={(e) => setTaskSelect(e.target.value)}
             required
           >
-            <option placeholder="please pick one" required>
-              please pick one
+            <option placeholder disabled required>
+              Please pick one
             </option>
             <option>yard work</option>
             <option>cleaning</option>
