@@ -1,28 +1,19 @@
 import landing from "../assets/landing.svg";
-import Header from "../components/Header";
+import { useNavigate } from "react-router-dom";
 
-// import { useState, useNavigate } from "react";
-
-function Home({ setSelectedProvide, setSelectedRequest }) {
-  // const [selectBtn, setSelectBtn] = useState(false);
-  // const navigate = useNavigate();
-  // const handleClick = () => {
-  //   navigate("/request");
-  // };
+function Home() {
+  const navigate = useNavigate();
 
   const handleProvide = () => {
-    setSelectedProvide(true);
-    setSelectedRequest(false);
+    navigate("/provide");
   };
 
   const handleRequest = () => {
-    setSelectedRequest(true);
-    setSelectedProvide(false);
+    navigate("/request");
   };
 
   return (
     <div className="wrapper">
-      <Header />
       <div className="main-container">
         <div className="text-box">
           <h1>Neighbors helping neighbors</h1>
