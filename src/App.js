@@ -5,6 +5,7 @@
 // import { useEffect } from "react";
 import "./App.scss";
 import React from "react";
+import { Link, Routes, Route } from "react-router-dom";
 import { useState } from "react";
 import Home from "./pages/Home";
 import Request from "./pages/Request";
@@ -12,29 +13,15 @@ import Provide from "./pages/Provide";
 import Footer from "./components/Footer";
 
 function App() {
-  const [selectedRequest, setSelectedRequest] = useState(false);
-  const [selectedProvide, setSelectedProvide] = useState(false);
   return (
     <div>
-      {selectedRequest || selectedProvide ? null : (
-        <Home
-          setSelectedRequest={setSelectedRequest}
-          setSelectedProvide={setSelectedProvide}
-        />
-      )}
-      {selectedRequest && (
-        <Request
-          setSelectedRequest={setSelectedRequest}
-          setSelectedProvide={setSelectedProvide}
-        />
-      )}
-      {selectedProvide && (
-        <Provide
-          setSelectedRequest={setSelectedRequest}
-          setSelectedProvide={setSelectedProvide}
-        />
-      )}
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
 
+        <Route path="/Provide" element={<Provide />} />
+        <Route path="/Request" element={<Request />} />
+      </Routes>
       <Footer />
     </div>
   );
@@ -57,20 +44,33 @@ export default App;
 //     });
 // }, []);
 
-//! on hold codes for route
-{
-  /* <Route
-        path="/"
-        element={
-          <>
-            <header>NBRLYU</header>
-            <Home />
-          </>
-        }
-      />
-      <Route path="/request" element={<Request />} />
+//! on hold codes for conditional rendering
+// const [selectedRequest, setSelectedRequest] = useState(false);
+// const [selectedProvide, setSelectedProvide] = useState(false);
 
-      <Route path="/provide" element={<Provide />} /> */
+{
+  /* <div>
+      {selectedRequest || selectedProvide ? null : (
+        <Home
+          setSelectedRequest={setSelectedRequest}
+          setSelectedProvide={setSelectedProvide}
+        />
+      )}
+      {selectedRequest && (
+        <Request
+          setSelectedRequest={setSelectedRequest}
+          setSelectedProvide={setSelectedProvide}
+        />
+      )}
+      {selectedProvide && (
+        <Provide
+          setSelectedRequest={setSelectedRequest}
+          setSelectedProvide={setSelectedProvide}
+        />
+      )}
+
+      <Footer />
+    </div> */
 }
 
 //TODO: Add Routes and Route
