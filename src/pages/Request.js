@@ -13,13 +13,13 @@ function Request() {
   const [taskDetail, setTaskDetail] = useState("");
   const [zipCode, setZipCode] = useState("");
   const [email, setEmail] = useState("");
+
   const allowSubmit = () => {
     return (
       firstName.length && taskSelect.length && zipCode.length && email.length
     );
   };
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleSubmit = () => {
     if (!allowSubmit) {
       navigate("/warning");
     } else navigate("/modal");
@@ -51,17 +51,21 @@ function Request() {
           />
         </fieldset>
         <fieldset className="task-dropdown">
-          <label htmlFor="task-list">Pick your task ⁕</label>
+          <label htmlFor="task-list" className="sr-only">
+            Pick your task ⁕
+          </label>
           <select
             id="task-list"
             value={taskSelect}
             onChange={(e) => setTaskSelect(e.target.value)}
             required
           >
-            <option defaultValue="placeholder">Please pick one</option>
-            <option>yard work</option>
-            <option>cleaning</option>
-            <option>cooking</option>
+            <option value="placeholder" default>
+              Please pick one
+            </option>
+            <option required>cooking</option>
+            <option required>cleaning</option>
+            <option required>yard work</option>
           </select>
         </fieldset>
         <fieldset className="task-description">
@@ -101,7 +105,7 @@ function Request() {
           <label htmlFor="">Upload photo (jpeg., tiff., png.) 🖇️</label>
         </fieldset> */}
         <div className="button-box">
-          <button type="submit" onClick={handleSubmit} disabled={allowSubmit}>
+          <button type="submit" onClick={handleSubmit} disabled={!allowSubmit}>
             Submit
           </button>
           <button type="submit" onClick={handleCancel}>

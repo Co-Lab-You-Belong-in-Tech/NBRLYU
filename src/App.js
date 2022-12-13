@@ -5,7 +5,7 @@
 // import { useEffect } from "react";
 import "./App.scss";
 import React from "react";
-import { Link, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 // import { useState } from "react";
 import Header from "./components/Header";
 import Home from "./pages/Home";
@@ -53,31 +53,6 @@ export default App;
 //! on hold codes for conditional rendering
 // const [selectedRequest, setSelectedRequest] = useState(false);
 // const [selectedProvide, setSelectedProvide] = useState(false);
-
-{
-  /* <div>
-      {selectedRequest || selectedProvide ? null : (
-        <Home
-          setSelectedRequest={setSelectedRequest}
-          setSelectedProvide={setSelectedProvide}
-        />
-      )}
-      {selectedRequest && (
-        <Request
-          setSelectedRequest={setSelectedRequest}
-          setSelectedProvide={setSelectedProvide}
-        />
-      )}
-      {selectedProvide && (
-        <Provide
-          setSelectedRequest={setSelectedRequest}
-          setSelectedProvide={setSelectedProvide}
-        />
-      )}
-
-      <Footer />
-    </div> */
-}
 
 //TODO: Add Routes and Route
 //TODO: Add Sitemap for SEO
