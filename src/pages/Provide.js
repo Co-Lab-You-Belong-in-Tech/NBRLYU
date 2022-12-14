@@ -15,7 +15,11 @@ function Provide() {
         <h3>Help your neighbor in your area of expertise</h3>
         <fieldset className="zip-code">
           <label htmlFor="">Enter your zipcode</label>
-          <input type="text" />
+          <input
+            type="text"
+            inputmode="numeric"
+            pattern="^(?(^00000(| -0000)) | (\d{5}(| -\d{4})))$"
+          />
         </fieldset>
         <fieldset className="task-category">
           <p>Select a task category</p>
