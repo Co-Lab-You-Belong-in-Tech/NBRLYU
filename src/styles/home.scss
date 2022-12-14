@@ -1,6 +1,5 @@
 .main-container {
   display: flex;
-  height: 70vh;
 }
 
 .text-box {
@@ -8,7 +7,7 @@
   text-align: left;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-around;
 }
 
 .image-box {
