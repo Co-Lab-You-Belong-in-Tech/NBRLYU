@@ -1,7 +1,7 @@
 import Home from "./Home";
 import { useNavigate } from "react-router-dom";
 import { FaFontAwesome, FaRegTimesCircle } from "react-icons/fa";
-function Cancel() {
+function CancelReq() {
   const navigate = useNavigate();
   const goHome = () => {
     navigate("/");
@@ -24,4 +24,4 @@ function Cancel() {
     </>
   );
 }
-export default Cancel;
+export default CancelReq;

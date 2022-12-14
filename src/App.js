@@ -10,7 +10,8 @@ import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Request from "./pages/Request";
 import Provide from "./pages/Provide";
-import Cancel from "./pages/Cancel";
+import CancelReq from "./pages/CancelReq";
+import SubmitReq from "./pages/SubmitReq";
 import Warning from "./pages/Warning";
 import Error from "./pages/Error";
 // import Footer from "./components/Footer";
@@ -23,7 +24,8 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/Provide" element={<Provide />} />
         <Route path="/Request" element={<Request />} />
-        <Route path="/Cancel" element={<Cancel />} />
+        <Route path="/CancelReq" element={<CancelReq />} />
+        <Route path="/SubmitReq" element={<SubmitReq />} />
         <Route path="/Warning" element={<Warning />} />
         <Route path="*" element={<Error />} />
       </Routes>
