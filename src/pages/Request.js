@@ -4,7 +4,7 @@ import { useState } from "react";
 function Request() {
   const navigate = useNavigate();
   const handleCancel = () => {
-    navigate("/");
+    navigate("/cancel");
   };
 
   const [firstName, setFirstName] = useState("");
@@ -16,10 +16,10 @@ function Request() {
 
   const handleSubmit = () => {
     if (taskSelect === "placeholder") {
-      navigate("/warning");
-      // alert(
-      //   "One of more required fields are empty, please fill them all to submit"
-      // );
+      // navigate("/warning");
+      alert(
+        "One of more required fields are empty, please fill them all to submit"
+      );
     } else navigate("/modal");
   };
   return (
