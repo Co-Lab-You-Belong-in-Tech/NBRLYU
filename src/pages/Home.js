@@ -1,5 +1,7 @@
 import landing from "../assets/landing.svg";
 import { useNavigate } from "react-router-dom";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 function Home() {
   const navigate = useNavigate();
@@ -14,6 +16,7 @@ function Home() {
 
   return (
     <div className="wrapper">
+      <Header />
       <div className="main-container">
         <div className="text-box">
           <h1>Neighbors helping neighbors</h1>
@@ -38,6 +41,7 @@ function Home() {
           />
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

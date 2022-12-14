@@ -1,34 +1,33 @@
 //! on hold import
 // import { getDatabase, ref, onValue, get } from "firebase/database";
 // import firebase from "./firebase";
-// import { Routes, Route } from "react-router-dom";
 // import { useEffect } from "react";
 import "./App.scss";
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 // import { useState } from "react";
-import Header from "./components/Header";
+// import Header from "./components/Header";
 import Home from "./pages/Home";
 import Request from "./pages/Request";
 import Provide from "./pages/Provide";
-import Modal from "./pages/Modal";
+import Cancel from "./pages/Cancel";
 import Warning from "./pages/Warning";
 import Error from "./pages/Error";
-import Footer from "./components/Footer";
+// import Footer from "./components/Footer";
 
 function App() {
   return (
     <div>
-      <Header />
+      {/* <Header /> */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Provide" element={<Provide />} />
         <Route path="/Request" element={<Request />} />
-        <Route path="/Modal" element={<Modal />} />
+        <Route path="/Cancel" element={<Cancel />} />
         <Route path="/Warning" element={<Warning />} />
         <Route path="*" element={<Error />} />
       </Routes>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

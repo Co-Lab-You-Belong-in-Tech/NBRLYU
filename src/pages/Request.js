@@ -4,24 +4,22 @@ import { useState } from "react";
 function Request() {
   const navigate = useNavigate();
   const handleCancel = () => {
-    navigate("/");
+    navigate("/cancel");
   };
 
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
-  const [taskSelect, setTaskSelect] = useState("");
+  const [taskSelect, setTaskSelect] = useState("placeholder");
   const [taskDetail, setTaskDetail] = useState("");
   const [zipCode, setZipCode] = useState("");
   const [email, setEmail] = useState("");
 
-  const allowSubmit = () => {
-    return (
-      firstName.length && taskSelect.length && zipCode.length && email.length
-    );
-  };
   const handleSubmit = () => {
-    if (!allowSubmit) {
-      navigate("/warning");
+    if (taskSelect === "placeholder") {
+      // navigate("/warning");
+      alert(
+        "One of more required fields are empty, please fill them all to submit"
+      );
     } else navigate("/modal");
   };
   return (
@@ -60,7 +58,7 @@ function Request() {
             onChange={(e) => setTaskSelect(e.target.value)}
             required
           >
-            <option value="placeholder" default>
+            <option value="placeholder" disabled>
               Please pick one
             </option>
             <option required>cooking</option>
@@ -105,12 +103,8 @@ function Request() {
           <label htmlFor="">Upload photo (jpeg., tiff., png.) 🖇️</label>
         </fieldset> */}
         <div className="button-box">
-          <button type="submit" onClick={handleSubmit} disabled={!allowSubmit}>
-            Submit
-          </button>
-          <button type="submit" onClick={handleCancel}>
-            Cancel
-          </button>
+          <button onClick={handleSubmit}>Submit</button>
+          <button onClick={handleCancel}>Cancel</button>
         </div>
       </form>
     </div>
