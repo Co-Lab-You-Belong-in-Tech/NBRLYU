@@ -52,9 +52,7 @@ function Request() {
             />
           </fieldset>
           <fieldset className="task-dropdown">
-            <label htmlFor="task-list" className="sr-only">
-              Pick your task ⁕
-            </label>
+            <label htmlFor="task-list">Pick your task ⁕</label>
             <select
               id="task-list"
               value={taskSelect}
