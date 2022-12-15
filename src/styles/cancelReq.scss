@@ -1,13 +1,12 @@
 .home-wrapper {
   opacity: 0.3;
 }
-.submit-req-msg {
+.cancel-req-msg {
   position: absolute;
   left: 25%;
   top: 25%;
   z-index: 10;
-  opacity: 1;
-  .submit-req-text {
+  .cancel-req-text {
     display: flex;
     justify-content: center;
     align-items: center;

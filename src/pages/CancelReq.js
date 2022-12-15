@@ -12,11 +12,11 @@ function CancelReq() {
         <Home />
       </div>
       <div className="wrapper">
-        <div className="cancel-msg">
+        <div className="cancel-req-msg">
           <div onClick={goHome}>
             <FaRegTimesCircle />
           </div>
-          <div className="cancel-text">
+          <div className="cancel-req-text">
             <p>Your request has been cancelled. Hope to see you soon!</p>
           </div>
         </div>

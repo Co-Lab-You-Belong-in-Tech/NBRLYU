@@ -1,10 +1,10 @@
 import Request from "./Request";
 import { useNavigate } from "react-router-dom";
-import { FaFontAwesome, FaRegTimesCircle } from "react-icons/fa";
+import { FaRegTimesCircle } from "react-icons/fa";
 function SubmitReq() {
   const navigate = useNavigate();
-  const backToReq = () => {
-    navigate("/request");
+  const backToHome = () => {
+    navigate("/");
   };
 
   return (
@@ -14,7 +14,7 @@ function SubmitReq() {
       </div>
       <div className="wrapper">
         <div className="submit-req-msg">
-          <div onClick={backToReq}>
+          <div onClick={backToHome}>
             <FaRegTimesCircle />
           </div>
           <div className="submit-req-text">
