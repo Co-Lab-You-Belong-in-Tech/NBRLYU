@@ -19,10 +19,10 @@ function Results() {
             <h3 className="name">Naomi Watts</h3>
             <h4>Task description</h4>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque
-              fugit corporis quos aliquid consequuntur esse sapiente distinctio
-              ipsum labore reprehenderit recusandae obcaecati dicta accusantium
-              accusamus corrupti vel nostrum, modi explicabo.
+              I need help with raking my leaves. It needs to be done by Monday,
+              Dec 19th, 2022. I estimate it will take 2 people about 2 hours.
+              Tools provided.
+              <p>Email: newneighbor@hotmail.com</p>
             </p>
           </div>
         </div>
@@ -32,11 +32,11 @@ function Results() {
             <h3 className="name">Naomi Watts</h3>
             <h4>Task description</h4>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque
-              fugit corporis quos aliquid consequuntur esse sapiente distinctio
-              ipsum labore reprehenderit recusandae obcaecati dicta accusantium
-              accusamus corrupti vel nostrum, modi explicabo.
+              I need some cooking help for dinner this Tuesday (the 20th). Any
+              frozen meals, homemade or store-bought, for 1 person would be
+              greatly appreciated.
             </p>
+            <p>Email: aperson@yahoo.com</p>
           </div>
         </div>
         <div className="result-box">
@@ -45,11 +45,11 @@ function Results() {
             <h3 className="name">Naomi Watts</h3>
             <h4>Task description</h4>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque
-              fugit corporis quos aliquid consequuntur esse sapiente distinctio
-              ipsum labore reprehenderit recusandae obcaecati dicta accusantium
-              accusamus corrupti vel nostrum, modi explicabo.
+              I need help cleaning up some spills (liquid detergent) under the
+              washer. No heavy lifting (washer is easily movable), tools
+              provided, not urgent.
             </p>
+            <p>Email: someone@needshelp.com</p>
           </div>
         </div>
         <div className="button-box">
