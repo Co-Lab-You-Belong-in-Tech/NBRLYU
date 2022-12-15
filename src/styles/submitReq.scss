@@ -1,13 +1,14 @@
-.home-wrapper {
+.request-wrapper {
   opacity: 0.3;
 }
-.cancel-msg {
+
+.submit-req-msg {
   position: absolute;
-  left: 33%;
-  top: 347px;
+  left: 25%;
+  top: 25%;
   z-index: 10;
-  opacity: 1;
-  .cancel-text {
+
+  .submit-req-text {
     display: flex;
     justify-content: center;
     align-items: center;
