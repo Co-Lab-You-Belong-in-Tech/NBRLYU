@@ -1,5 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+import firebase from "../firebase";
+import { getDatabase, ref, push } from "firebase/database";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
@@ -16,6 +18,26 @@ function Request() {
   const [zipCode, setZipCode] = useState("");
   const [email, setEmail] = useState("");
 
+  // * onClick on submit button, push that state to the stateless version of the each input field array
+  const submitForm = (e) => {
+    e.preventDefault();
+
+    // * Create references to the database
+    const database = getDatabase(firebase);
+    const dbRef = ref(database);
+
+    // * Put user input of each input field in an object that can be pushed to the firebase
+    let formObjToPush = {
+      Name: firstName + lastName,
+      "Task Category": taskSelect,
+      "Task Detail": taskDetail,
+      "Zip Code": zipCode,
+      Email: email,
+    };
+
+    // * Push the object to firebase
+    push(dbRef, formObjToPush);
+  };
   const handleSubmit = () => {
     if (taskSelect === "placeholder") {
       alert(
@@ -106,7 +128,7 @@ function Request() {
           <label htmlFor="">Upload photo (jpeg., tiff., png.) 🖇️</label>
         </fieldset> */}
           <div className="button-box">
-            <button onClick={handleSubmit}>Submit</button>
+            <button onClick={(submitForm, handleSubmit)}>Submit</button>
             <button onClick={handleCancel}>Cancel</button>
           </div>
         </form>

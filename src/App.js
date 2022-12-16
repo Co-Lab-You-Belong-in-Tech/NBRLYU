@@ -1,12 +1,9 @@
-//! on hold import
-// import { getDatabase, ref, onValue, get } from "firebase/database";
-// import firebase from "./firebase";
-// import { useEffect } from "react";
 import "./App.scss";
+// import firebase from "./firebase";
+// import { getDatabase, ref, onValue, get } from "firebase/database";
+// import { useEffect, useState } from "react";
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-// import { useState } from "react";
-// import Header from "./components/Header";
 import Home from "./pages/Home";
 import Request from "./pages/Request";
 import Provide from "./pages/Provide";
@@ -15,12 +12,24 @@ import SubmitReq from "./pages/SubmitReq";
 import Results from "./pages/Results";
 import Warning from "./pages/Warning";
 import Error from "./pages/Error";
-// import Footer from "./components/Footer";
 
 function App() {
+  // useEffect(() => {
+  //   const database = getDatabase(firebase);
+  //   const dbRef = ref(database);
+  //   get(dbRef)
+  //     .then((snapshot) => {
+  //       if (snapshot.exists()) {
+  //         const data = snapshot.val();
+  //       }
+  //     })
+  //     .catch((error) => {
+  //       alert("There is no request matches your search. Please try again!");
+  //     });
+  // }, []);
+
   return (
     <div>
-      {/* <Header /> */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Provide" element={<Provide />} />
@@ -31,27 +40,11 @@ function App() {
         <Route path="/Warning" element={<Warning />} />
         <Route path="*" element={<Error />} />
       </Routes>
-      {/* <Footer /> */}
     </div>
   );
 }
 
 export default App;
-
-//! on hold codes for firebase
-// useEffect(() => {
-//   const database = getDatabase(firebase);
-//   const dbRef = ref(database);
-//   get(dbRef)
-//     .then((snapshot) => {
-//       if (snapshot.exists()) {
-//         const data = snapshot.val();
-//       }
-//     })
-//     .catch((error) => {
-//       alert("There is no request matches your search. Please try again!");
-//     });
-// }, []);
 
 //! on hold codes for conditional rendering
 // const [selectedRequest, setSelectedRequest] = useState(false);
