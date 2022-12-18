@@ -12,7 +12,7 @@ function Request() {
   };
 
   const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
+  // const [lastName, setLastName] = useState("");
   const [taskSelect, setTaskSelect] = useState("placeholder");
   const [taskDetail, setTaskDetail] = useState("");
   const [zipCode, setZipCode] = useState("");
@@ -28,7 +28,7 @@ function Request() {
 
     // * Put user input of each input field in an object that can be pushed to the firebase
     let formObjToPush = {
-      Name: firstName + lastName,
+      "First Name": firstName,
       "Task Category": taskSelect,
       "Task Detail": taskDetail,
       "Zip Code": zipCode,
@@ -64,14 +64,14 @@ function Request() {
                 setFirstName(e.target.value);
               }}
             />
-            <label htmlFor="last-name">Last Name</label>
+            {/* <label htmlFor="last-name">Last Name</label>
             <input
               id="last-name"
               type="text"
               placeholder="Last Name"
               value={lastName}
               onChange={(e) => setLastName(e.target.value)}
-            />
+            /> */}
           </fieldset>
           <fieldset className="task-dropdown">
             <label htmlFor="task-list">Pick your task ⁕</label>
@@ -91,7 +91,7 @@ function Request() {
           </fieldset>
           <fieldset className="task-description">
             <label htmlFor="task-detail">
-              Describe your task (150 characters)
+              Describe your task ⁕ (150 characters)
             </label>
             <textarea
               id="task-detail"
@@ -99,6 +99,7 @@ function Request() {
               rows="2"
               maxLength={150}
               value={taskDetail}
+              required
               onChange={(e) => setTaskDetail(e.target.value)}
             ></textarea>
           </fieldset>

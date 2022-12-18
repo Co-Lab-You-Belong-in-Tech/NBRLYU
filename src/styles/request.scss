@@ -3,14 +3,11 @@ h3 {
   text-align: center;
 }
 .request-form {
-  padding: 0 200px;
+  width: 50%;
+  padding: 20px 75px;
   margin: 0 auto;
 }
-.name-field {
-  display: flex;
-  justify-content: space-between;
-}
-
+.name-field,
 .task-dropdown,
 .task-description,
 .zip-code,
