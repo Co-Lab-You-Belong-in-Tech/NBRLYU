@@ -138,8 +138,3 @@ function Request() {
   );
 }
 export default Request;
-
-//? Pseudo Code
-//? the form will need to be stored in a database
-//? the zip code should be used as a search parameter
-//? the chore category should be used as another search parameter
