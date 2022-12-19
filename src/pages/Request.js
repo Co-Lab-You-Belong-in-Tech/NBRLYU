@@ -12,7 +12,6 @@ function Request() {
   };
 
   const [firstName, setFirstName] = useState("");
-  // const [lastName, setLastName] = useState("");
   const [taskSelect, setTaskSelect] = useState("placeholder");
   const [taskDetail, setTaskDetail] = useState("");
   const [zipCode, setZipCode] = useState("");

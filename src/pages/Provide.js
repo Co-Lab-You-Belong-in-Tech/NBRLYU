@@ -21,7 +21,7 @@ function Provide() {
           <h2>Pass on the neighborly goodness</h2>
           <h3>Help your neighbor in your area of expertise</h3>
           <fieldset className="zip-code">
-            <label htmlFor="zip-code">Enter your zipcode</label>
+            <label htmlFor="zip-code">Enter your zipcode ⁕</label>
             <input
               id="zip-code"
               type="text"
@@ -31,26 +31,26 @@ function Provide() {
             />
           </fieldset>
           <fieldset className="task-category">
-            <p>Select a task category</p>
+            <p>Select a task category ⁕</p>
             <p>(Or more if you have the time)</p>
             <div className="task-choices">
               <div className="each-task">
-                <input type="checkbox" />
-                <label htmlFor="">
+                <input id="cooking" type="checkbox" />
+                <label htmlFor="cooking">
                   <img src={cooking} alt="graphic of cooking" />
                   <p>Cooking</p>
                 </label>
               </div>
               <div className="each-task">
-                <input type="checkbox" />
-                <label htmlFor="">
+                <input id="cleaning" type="checkbox" />
+                <label htmlFor="cleaning">
                   <img src={cleaning} alt="graphic of cleaning" />
                   <p>Cleaning</p>
                 </label>
               </div>
               <div className="each-task">
-                <input type="checkbox" />
-                <label htmlFor="">
+                <input id="yard" type="checkbox" />
+                <label htmlFor="yard">
                   <img src={yard} alt="graphic of yard work" />
                   <p>Yard Work</p>
                 </label>
