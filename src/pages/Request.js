@@ -23,19 +23,24 @@ function Request() {
 
     // * Create references to the database
     const database = getDatabase(firebase);
-    const dbRef = ref(database);
+    const dbRef = ref(database, `/${taskSelect}/${zipCode}`);
 
     // * Put user input of each input field in an object that can be pushed to the firebase
     let formObjToPush = {
-      "First Name": firstName,
-      "Task Category": taskSelect,
-      "Task Detail": taskDetail,
-      "Zip Code": zipCode,
-      Email: email,
+      firstName,
+      description: taskDetail,
+      zipCode,
+      email,
     };
 
     // * Push the object to firebase
     push(dbRef, formObjToPush);
+    setFirstName("");
+    setTaskSelect("placeholder");
+    setTaskDetail("");
+    setZipCode("");
+    setEmail("");
+    handleSubmit();
   };
   const handleSubmit = () => {
     if (taskSelect === "placeholder") {
@@ -63,17 +68,11 @@ function Request() {
                 setFirstName(e.target.value);
               }}
             />
-            {/* <label htmlFor="last-name">Last Name</label>
-            <input
-              id="last-name"
-              type="text"
-              placeholder="Last Name"
-              value={lastName}
-              onChange={(e) => setLastName(e.target.value)}
-            /> */}
           </fieldset>
           <fieldset className="task-dropdown">
-            <label htmlFor="task-list">Pick your task ⁕</label>
+            <label required htmlFor="task-list">
+              Pick your task ⁕
+            </label>
             <select
               id="task-list"
               value={taskSelect}
@@ -108,7 +107,7 @@ function Request() {
               id="zip"
               type="text"
               inputMode="numeric"
-              pattern="^(?(^00000(| -0000)) | (\d{5}(| -\d{4})))$"
+              maxLength={5}
               value={zipCode}
               onChange={(e) => setZipCode(e.target.value)}
               required
@@ -124,11 +123,8 @@ function Request() {
               required
             />
           </fieldset>
-          {/* <fieldset>
-          <label htmlFor="">Upload photo (jpeg., tiff., png.) 🖇️</label>
-        </fieldset> */}
           <div className="button-box">
-            <button onClick={(submitForm, handleSubmit)}>Submit</button>
+            <button onClick={submitForm}>Submit</button>
             <button onClick={handleCancel}>Cancel</button>
           </div>
         </form>

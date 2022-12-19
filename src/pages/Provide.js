@@ -13,6 +13,7 @@ function Provide() {
   const handleSubmit = () => {
     navigate("/results");
   };
+
   return (
     <div className="page-wrapper">
       <div className="wrapper">
@@ -21,13 +22,15 @@ function Provide() {
           <h2>Pass on the neighborly goodness</h2>
           <h3>Help your neighbor in your area of expertise</h3>
           <fieldset className="zip-code">
-            <label htmlFor="zip-code">Enter your zipcode ⁕</label>
+            <label required htmlFor="zip-code">
+              Enter your zipcode ⁕
+            </label>
             <input
               id="zip-code"
               type="text"
               required
               // inputMode="numeric"
-              pattern="^(?(^00000(| -0000)) | (\d{5}(| -\d{4})))$"
+              // pattern="^(?(^00000(| -0000)) | (\d{5}(| -\d{4})))$"
             />
           </fieldset>
           <fieldset className="task-category">
