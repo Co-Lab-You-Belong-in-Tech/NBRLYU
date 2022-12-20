@@ -7,17 +7,16 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 
 function Provide() {
-  const [zipCode, setZipCode] = useState();
+  const [zipCode, setZipCode] = useState("");
   const navigate = useNavigate();
   const handleCancel = () => {
     navigate("/");
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (zipCode === null) {
+    if (zipCode.length === 0) {
       alert("Please enter a valid zip code!");
-    }
-    navigate("/results");
+    } else navigate("/results");
   };
 
   return (
