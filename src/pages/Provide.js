@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 import cooking from "../assets/cooking.jpg";
 import cleaning from "../assets/cleaning.jpg";
 import yard from "../assets/yard.jpg";
@@ -6,11 +7,16 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 
 function Provide() {
+  const [zipCode, setZipCode] = useState();
   const navigate = useNavigate();
   const handleCancel = () => {
     navigate("/");
   };
-  const handleSubmit = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (zipCode === null) {
+      alert("Please enter a valid zip code!");
+    }
     navigate("/results");
   };
 
@@ -28,9 +34,11 @@ function Provide() {
             <input
               id="zip-code"
               type="text"
+              value={zipCode}
+              onChange={(e) => {
+                setZipCode(e.target.value);
+              }}
               required
-              // inputMode="numeric"
-              // pattern="^(?(^00000(| -0000)) | (\d{5}(| -\d{4})))$"
             />
           </fieldset>
           <fieldset className="task-category">
