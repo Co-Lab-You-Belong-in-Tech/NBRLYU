@@ -8,6 +8,9 @@ import Footer from "../components/Footer";
 
 function Provide() {
   const [zipCode, setZipCode] = useState("");
+  const [cookingCb, setCookingCb] = useState(false);
+  const [cleaningCb, setCleaningCb] = useState(false);
+  const [yardworkCb, setYardworkCb] = useState(false);
   const navigate = useNavigate();
   const handleCancel = () => {
     navigate("/");
@@ -16,6 +19,10 @@ function Provide() {
     e.preventDefault();
     if (zipCode.length === 0) {
       alert("Please enter a valid zip code!");
+
+      if (cookingCb === false && cleaningCb === false && yardworkCb === false) {
+        alert("Please select at least one category!");
+      }
     } else navigate("/results");
   };
 
@@ -45,21 +52,33 @@ function Provide() {
             <p>(Or more if you have the time)</p>
             <div className="task-choices">
               <div className="each-task">
-                <input id="cooking" type="checkbox" />
+                <input
+                  id="cooking"
+                  type="checkbox"
+                  onClick={() => setCookingCb(!cookingCb)}
+                />
                 <label htmlFor="cooking">
                   <img src={cooking} alt="graphic of cooking" />
                   <p>Cooking</p>
                 </label>
               </div>
               <div className="each-task">
-                <input id="cleaning" type="checkbox" />
+                <input
+                  id="cleaning"
+                  type="checkbox"
+                  onClick={() => setCleaningCb(!cleaningCb)}
+                />
                 <label htmlFor="cleaning">
                   <img src={cleaning} alt="graphic of cleaning" />
                   <p>Cleaning</p>
                 </label>
               </div>
               <div className="each-task">
-                <input id="yard" type="checkbox" />
+                <input
+                  id="yard"
+                  type="checkbox"
+                  onClick={() => setYardworkCb(!yardworkCb)}
+                />
                 <label htmlFor="yard">
                   <img src={yard} alt="graphic of yard work" />
                   <p>Yard Work</p>
