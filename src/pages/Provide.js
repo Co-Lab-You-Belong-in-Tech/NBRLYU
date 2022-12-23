@@ -19,10 +19,9 @@ function Provide() {
     e.preventDefault();
     if (zipCode.length === 0) {
       alert("Please enter a valid zip code!");
-
-      if (cookingCb === false && cleaningCb === false && yardworkCb === false) {
-        alert("Please select at least one category!");
-      }
+    }
+    if (cookingCb === false && cleaningCb === false && yardworkCb === false) {
+      alert("Please select at least one category!");
     } else navigate("/results");
   };
 
