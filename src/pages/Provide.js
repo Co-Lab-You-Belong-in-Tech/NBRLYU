@@ -17,9 +17,9 @@ function Provide() {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (zipCode.length === 0) {
+    if (zipCode.length <= 5) {
       alert("Please enter a valid zip code!");
-    }
+    } else return zipCode;
     if (cookingCb === false && cleaningCb === false && yardworkCb === false) {
       alert("Please select at least one category!");
     } else navigate("/results");
