@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+import { zipcodes } from "zipcodes";
 import cooking from "../assets/cooking.jpg";
 import cleaning from "../assets/cleaning.jpg";
 import yard from "../assets/yard.jpg";
@@ -17,8 +18,12 @@ function Provide() {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (zipCode.length < 5) {
+    if (zipCode.length !== 5) {
       alert("Please enter a valid zip code!");
+    } else if (zipCode.length === 5) {
+      let zipcodes = require("zipcodes");
+      let rad = zipcodes.radius(90210, 5);
+      localStorage.setItem("rad", JSON.stringify(rad));
     } else if (
       cookingCb === false &&
       cleaningCb === false &&
