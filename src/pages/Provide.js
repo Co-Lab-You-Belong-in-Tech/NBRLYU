@@ -18,12 +18,13 @@ function Provide() {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (zipCode.length !== 5) {
+    if (zipCode.length !== 5 && zipCode !== /^[0-9\b]+$/) {
       alert("Please enter a valid zip code!");
     } else if (zipCode.length === 5) {
       let zipcodes = require("zipcodes");
       let rad = zipcodes.radius(90210, 5);
-      localStorage.setItem("rad", JSON.stringify(rad));
+      console.log(rad);
+      localStorage.setItem(rad, JSON.stringify(rad));
     } else if (
       cookingCb === false &&
       cleaningCb === false &&
