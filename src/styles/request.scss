@@ -3,12 +3,15 @@ h3 {
   text-align: center;
 }
 .request-form {
-  padding: 0 200px;
   margin: 0 auto;
 }
 .name-field {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
+  margin: 0 auto;
+  width: 50%;
+  margin-bottom: 20px;
 }
 
 .task-dropdown,
@@ -17,9 +20,45 @@ h3 {
 .email-field {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 50%;
+  margin: 0 auto;
+  margin-bottom: 20px;
 }
 .button-box {
   display: flex;
   justify-content: space-evenly;
+}
+
+// !Media Queries
+// !960px
+@media (max-width: 960px) {
+  .name-field,
+  .task-dropdown,
+  .task-description,
+  .zip-code,
+  .email-field {
+    width: 65%;
+  }
+}
+
+// !780px
+@media (max-width: 780px) {
+  .name-field,
+  .task-dropdown,
+  .task-description,
+  .zip-code,
+  .email-field {
+    width: 70%;
+  }
+}
+
+// !420px
+@media (max-width: 420px) {
+  .name-field,
+  .task-dropdown,
+  .task-description,
+  .zip-code,
+  .email-field {
+    width: 90%;
+  }
 }
