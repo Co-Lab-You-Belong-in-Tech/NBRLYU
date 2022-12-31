@@ -68,3 +68,8 @@ function Provide() {
   );
 }
 export default Provide;
+
+//? Pseudo Code
+//? Need an geolocation API to generate all zip codes within the 5 miles radius of the zip code entered in search input area
+//? All these zip codes would be used to match any zip codes in the forms' zip codes in the database
+//! Warning: a tag doesn't work in React, try Link or something else clickable
