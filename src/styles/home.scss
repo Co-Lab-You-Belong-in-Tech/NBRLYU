@@ -25,14 +25,35 @@ button {
   margin: 0 10px;
 }
 
-//! Media Queries
+// !Media Queries
 // !960px
 @media (max-width: 960px) {
   .button-box {
-    display: flex;
     flex-direction: column;
     button {
       margin: 5px 0;
     }
+  }
+}
+
+// !780px
+@media (max-width: 780px) {
+  .main-container {
+    flex-direction: column-reverse;
+  }
+  .text-box,
+  .image-box {
+    width: 100%;
+  }
+  .button-box {
+    align-self: center;
+    width: 60%;
+    flex-direction: row;
+  }
+}
+//! 420px
+@media (max-width: 420px) {
+  .button-box {
+    flex-direction: column;
   }
 }

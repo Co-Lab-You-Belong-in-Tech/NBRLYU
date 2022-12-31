@@ -3,7 +3,6 @@
   justify-content: space-between;
 }
 .each-task {
-  // border: 1px solid red;
   width: 25%;
   padding: 0 20px;
   display: flex;
@@ -16,4 +15,32 @@
 .button-box {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+// !Media Queries
+
+// !960px
+.button-box {
+  flex-direction: row;
+}
+// !780px
+.button-box {
+  width: 100%;
+}
+//! 420px
+@media (max-width: 420px) {
+  .button-box {
+    flex-direction: column;
+  }
+  .task-choices {
+    flex-direction: column;
+  }
+  .each-task {
+    width: 100%;
+    justify-content: space-between;
+    label img {
+      width: 100%;
+    }
+  }
 }
