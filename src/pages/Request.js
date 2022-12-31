@@ -86,7 +86,7 @@ function Request() {
               id="zip"
               type="text"
               inputMode="numeric"
-              pattern="^(?(^00000(| -0000)) | (\d{5}(| -\d{4})))$"
+              // pattern="^(?(^00000(| -0000)) | (\d{5}(| -\d{4})))$"
               value={zipCode}
               onChange={(e) => setZipCode(e.target.value)}
               required

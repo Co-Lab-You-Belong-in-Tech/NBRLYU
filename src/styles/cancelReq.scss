@@ -4,14 +4,15 @@
 .cancel-req-msg {
   position: absolute;
   left: 25%;
+  right: 25%;
   top: 25%;
   z-index: 10;
   .cancel-req-text {
+    padding: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 660px;
-    height: 240px;
+    width: 100%;
     background-color: $popup;
     border-radius: 10px 10px 10px 10px;
     text-align: center;
