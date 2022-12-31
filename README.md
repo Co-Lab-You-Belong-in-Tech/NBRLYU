@@ -2,7 +2,7 @@
 # NBRLYU
 
 # 📘Table of Contents
-## Description
+## :writing_hand: Description
 ### NBRLYU 
 is a website that allows neighbors to perform small acts of kindness for each other. It is intended to reduce loneliness and social isolation among neighbors and build a sense of community and belonging.
 
