@@ -1,0 +1,17 @@
+.result-box {
+  width: 90%;
+  min-height: 30vh;
+  padding: 20px;
+  background-color: $formDisplayBg;
+  display: flex;
+  justify-content: center;
+  gap: 5%;
+  margin-bottom: 50px;
+  h3 {
+    text-align: left;
+  }
+  img {
+    height: 30vh;
+    width: auto;
+  }
+}

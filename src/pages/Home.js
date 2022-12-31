@@ -1,30 +1,49 @@
-import "../styles/home.css";
-import { useState, useNavigate } from "react";
+import landing from "../assets/landing.svg";
+import { useNavigate } from "react-router-dom";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 function Home() {
-  // const [selectBtn, setSelectBtn] = useState(false);
-  // const navigate = useNavigate();
-  // const handleClick = () => {
-  //   navigate("/request");
-  // };
+  const navigate = useNavigate();
+
+  const handleProvide = () => {
+    navigate("/provide");
+  };
+
+  const handleRequest = () => {
+    navigate("/request");
+  };
 
   return (
-    <div className="wrapper">
-      <h2>A network to give and receive neighborly help</h2>
-      <div className="selectField">
-        <div className="select">
-          <h3>pass on the neighborly goodness</h3>
-          <button className="button" onClick={handleProvide}>
-            Give Help
-          </button>
-        </div>
-        <div className="select">
-          <h3>Bask in the neighborly goodness</h3>
-          <button className="button" onClick={handleRequest}>
-            Request Help
-          </button>
+    <div className="page-wrapper">
+      <div className="wrapper">
+        <Header />
+        <div className="main-container">
+          <div className="text-box">
+            <h1>Neighbors helping neighbors</h1>
+            <p>
+              A network to give and receive neighborly help. Improve your sense
+              of community by providing help or asking for help.
+            </p>
+            <div className="button-box">
+              <button className="button" onClick={handleProvide}>
+                Give Help
+              </button>
+
+              <button className="button" onClick={handleRequest}>
+                Request Help
+              </button>
+            </div>
+          </div>
+          <div className="image-box">
+            <img
+              src={landing}
+              alt="graphics of neighbours gather to help each other"
+            />
+          </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

@@ -1,0 +1,23 @@
+.main-container {
+  display: flex;
+}
+
+.text-box {
+  width: 30%;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.image-box {
+  width: 70%;
+  img {
+    width: 90%;
+    height: auto;
+  }
+}
+
+button {
+  margin: 0 10px;
+}
