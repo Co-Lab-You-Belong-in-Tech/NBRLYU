@@ -1,3 +1,4 @@
+![neighborly you logo](https://github.com/Co-Lab-You-Belong-in-Tech/NBRLYU/blob/main/src/assets/logo.png)
 # NBRLYU
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
