@@ -22,9 +22,9 @@ function Provide() {
       alert("Please enter a valid zip code!");
     } else if (zipCode.length === 5) {
       let zipcodes = require("zipcodes");
-      let rad = zipcodes.radius(90210, 5);
+      let rad = zipcodes.radius(zipCode, 5);
       console.log(rad);
-      localStorage.setItem(rad, JSON.stringify(rad));
+      // localStorage.setItem(rad, JSON.stringify(rad));
     } else if (
       cookingCb === false &&
       cleaningCb === false &&
