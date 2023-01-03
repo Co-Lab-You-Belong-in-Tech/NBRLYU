@@ -12,6 +12,7 @@ function Provide() {
   const [cookingCb, setCookingCb] = useState(false);
   const [cleaningCb, setCleaningCb] = useState(false);
   const [yardworkCb, setYardworkCb] = useState(false);
+  const [selectedCategory, setSelectedCategory] = useState("");
   const navigate = useNavigate();
   const handleCancel = () => {
     navigate("/");
@@ -20,18 +21,18 @@ function Provide() {
     e.preventDefault();
     if (zipCode.length !== 5 && zipCode !== /^[0-9\b]+$/) {
       alert("Please enter a valid zip code!");
-    } else if (zipCode.length === 5) {
+    } else {
       let zipcodes = require("zipcodes");
       let rad = zipcodes.radius(zipCode, 5);
       console.log(rad);
       // localStorage.setItem(rad, JSON.stringify(rad));
-    } else if (
-      cookingCb === false &&
-      cleaningCb === false &&
-      yardworkCb === false
-    ) {
-      alert("Please select at least one category!");
-    } else navigate("/results");
+      if (cookingCb === false && cleaningCb === false && yardworkCb === false) {
+        alert("Please select at least one category!");
+      } else {
+        console.log(selectedCategory);
+      }
+    }
+    // else navigate("/results");
   };
 
   return (
@@ -64,6 +65,7 @@ function Provide() {
                   id="cooking"
                   type="checkbox"
                   onClick={() => setCookingCb(!cookingCb)}
+                  onChange={(e) => setSelectedCategory(e.target.id)}
                 />
                 <label htmlFor="cooking">
                   <img src={cooking} alt="graphic of cooking" />
@@ -75,6 +77,7 @@ function Provide() {
                   id="cleaning"
                   type="checkbox"
                   onClick={() => setCleaningCb(!cleaningCb)}
+                  onChange={(e) => setSelectedCategory(e.target.id)}
                 />
                 <label htmlFor="cleaning">
                   <img src={cleaning} alt="graphic of cleaning" />
@@ -86,6 +89,7 @@ function Provide() {
                   id="yard"
                   type="checkbox"
                   onClick={() => setYardworkCb(!yardworkCb)}
+                  onChange={(e) => setSelectedCategory(e.target.id)}
                 />
                 <label htmlFor="yard">
                   <img src={yard} alt="graphic of yard work" />
@@ -109,4 +113,3 @@ export default Provide;
 //? Pseudo Code
 //? Need an geolocation API to generate all zip codes within the 5 miles radius of the zip code entered in search input area
 //? All these zip codes would be used to match any zip codes in the forms' zip codes in the database
-//! Warning: a tag doesn't work in React, try Link or something else clickable
