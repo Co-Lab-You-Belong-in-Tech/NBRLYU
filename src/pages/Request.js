@@ -82,9 +82,15 @@ function Request() {
               <option value="placeholder" disabled>
                 Please pick one
               </option>
-              <option required>cooking</option>
-              <option required>cleaning</option>
-              <option required>yard work</option>
+              <option required value="cooking">
+                cooking
+              </option>
+              <option required value="cleaning">
+                cleaning
+              </option>
+              <option required value="yardwork">
+                yard work
+              </option>
             </select>
           </fieldset>
           <fieldset className="task-description">

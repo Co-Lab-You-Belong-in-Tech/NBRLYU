@@ -6,6 +6,9 @@ import cleaning from "../assets/cleaning.jpg";
 import yard from "../assets/yard.jpg";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import firebase from "../firebase";
+//import { db } from "../firebase";
+import { ref, get, getDatabase, onValue } from "firebase/database";
 
 function Provide() {
   const [zipCode, setZipCode] = useState("");
@@ -13,6 +16,8 @@ function Provide() {
   const [cleaningCb, setCleaningCb] = useState(false);
   const [yardworkCb, setYardworkCb] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState("");
+  //const dbRef = ref(db);
+  const database = getDatabase(firebase);
   const navigate = useNavigate();
   const handleCancel = () => {
     navigate("/");
@@ -24,12 +29,17 @@ function Provide() {
     } else {
       let zipcodes = require("zipcodes");
       let rad = zipcodes.radius(zipCode, 5);
-      console.log(rad);
+      //console.log(rad);
       // localStorage.setItem(rad, JSON.stringify(rad));
       if (cookingCb === false && cleaningCb === false && yardworkCb === false) {
         alert("Please select at least one category!");
       } else {
         console.log(selectedCategory);
+        console.log(rad);
+        const dbRef = ref(database, `${selectedCategory}`);
+        onValue(dbRef, (snapshot) => {
+          console.log(snapshot.val());
+        });
       }
     }
     // else navigate("/results");
@@ -86,12 +96,12 @@ function Provide() {
               </div>
               <div className="each-task">
                 <input
-                  id="yard"
+                  id="yardwork"
                   type="checkbox"
                   onClick={() => setYardworkCb(!yardworkCb)}
                   onChange={(e) => setSelectedCategory(e.target.id)}
                 />
-                <label htmlFor="yard">
+                <label htmlFor="yardwork">
                   <img src={yard} alt="graphic of yard work" />
                   <p>Yard Work</p>
                 </label>
