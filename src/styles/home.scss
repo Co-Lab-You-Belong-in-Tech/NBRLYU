@@ -1,5 +1,6 @@
 .main-container {
   display: flex;
+  justify-content: space-between;
 }
 
 .text-box {
@@ -12,12 +13,53 @@
 
 .image-box {
   width: 70%;
+  display: flex;
+  justify-content: center;
   img {
     width: 90%;
     height: auto;
   }
 }
-
+.home-button-box {
+  display: flex;
+}
 button {
   margin: 0 10px;
+}
+
+// !Media Queries
+// !960px
+@media (max-width: 960px) {
+  .image-box {
+    width: 65%;
+  }
+  .home-button-box {
+    flex-direction: column;
+    width: 60%;
+
+    button {
+      margin: 5px 0;
+    }
+  }
+}
+
+// !780px
+@media (max-width: 780px) {
+  .main-container {
+    flex-direction: column-reverse;
+  }
+  .home-button-box {
+    align-self: center;
+  }
+  .text-box,
+  .image-box {
+    width: 100%;
+  }
+}
+
+//! 420px
+@media (max-width: 420px) {
+  .home-button-box {
+    flex-direction: column;
+  }
 }

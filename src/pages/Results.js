@@ -18,12 +18,12 @@ function Results() {
           <div className="result-text">
             <h3 className="name">Naomi Watts</h3>
             <h4>Task description</h4>
-            <p>
+            <article>
               I need help with raking my leaves. It needs to be done by Monday,
               Dec 19th, 2022. I estimate it will take 2 people about 2 hours.
               Tools provided.
               <p>Email: newneighbor@hotmail.com</p>
-            </p>
+            </article>
           </div>
         </div>
         <div className="result-box">
@@ -31,11 +31,11 @@ function Results() {
           <div className="result-text">
             <h3 className="name">Naomi Watts</h3>
             <h4>Task description</h4>
-            <p>
+            <article>
               I need some cooking help for dinner this Tuesday (the 20th). Any
               frozen meals, homemade or store-bought, for 1 person would be
               greatly appreciated.
-            </p>
+            </article>
             <p>Email: aperson@yahoo.com</p>
           </div>
         </div>
@@ -44,11 +44,11 @@ function Results() {
           <div className="result-text">
             <h3 className="name">Naomi Watts</h3>
             <h4>Task description</h4>
-            <p>
+            <article>
               I need help cleaning up some spills (liquid detergent) under the
               washer. No heavy lifting (washer is easily movable), tools
               provided, not urgent.
-            </p>
+            </article>
             <p>Email: someone@needshelp.com</p>
           </div>
         </div>

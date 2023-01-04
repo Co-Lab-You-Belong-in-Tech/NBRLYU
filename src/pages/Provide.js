@@ -58,7 +58,7 @@ function Provide() {
             </div>
           </fieldset>
         </form>
-        <div className="button-box">
+        <div className="provide-button-box">
           <button onClick={handleSubmit}>Submit</button>
           <button onClick={handleCancel}>Cancel</button>
         </div>

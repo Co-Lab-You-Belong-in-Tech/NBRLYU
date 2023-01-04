@@ -25,7 +25,7 @@ function Home() {
               A network to give and receive neighborly help. Improve your sense
               of community by providing help or asking for help.
             </p>
-            <div className="button-box">
+            <div className="home-button-box">
               <button className="button" onClick={handleProvide}>
                 Give Help
               </button>

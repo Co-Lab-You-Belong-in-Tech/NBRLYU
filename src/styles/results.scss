@@ -1,10 +1,10 @@
 .result-box {
-  width: 90%;
+  width: 100%;
   min-height: 30vh;
   padding: 20px;
   background-color: $formDisplayBg;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   gap: 5%;
   margin-bottom: 50px;
   h3 {
@@ -13,5 +13,25 @@
   img {
     height: 30vh;
     width: auto;
+  }
+}
+// !Media Queries
+// !780px
+@media (max-width: 780px) {
+  .result-box {
+    img {
+      height: 20vh;
+    }
+  }
+}
+
+// !420px
+@media (max-width: 420px) {
+  .result-box {
+    flex-direction: column;
+    img {
+      width: 100%;
+      height: auto;
+    }
   }
 }
