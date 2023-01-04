@@ -12,6 +12,13 @@ select,
 textarea {
   border-radius: 10px 10px 10px 10px;
 }
+input[type="checkbox"] {
+  color: $text;
+  height: 1.15em;
+  width: 1.15em;
+  border: 1.15em solid $text;
+  border-radius: 0.15em;
+}
 button {
   font-family: $font;
   font-weight: medium;
