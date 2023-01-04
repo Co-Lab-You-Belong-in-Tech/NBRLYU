@@ -17,6 +17,32 @@
   justify-content: space-between;
   margin-bottom: 10px;
 }
+input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: $background;
+  margin: 0;
+  color: $text;
+  width: 16px;
+  height: 16px;
+  border: 2px solid $text;
+  border-radius: 5px;
+  padding: 10px;
+  display: grid;
+  place-content: center;
+}
+input[type="checkbox"]::before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 10px 10px $tagline;
+  background-color: $tagline;
+}
+input[type="checkbox"]:checked::before {
+  transform: scale(1);
+}
 
 // !Media Queries
 
