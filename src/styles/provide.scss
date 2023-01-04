@@ -50,8 +50,7 @@ input[type="checkbox"]:checked::before {
 
 // !780px
 
-//! 420px
-@media (max-width: 420px) {
+@media (max-width: 780px) {
   .task-choices {
     flex-direction: column;
   }
@@ -70,3 +69,4 @@ input[type="checkbox"]:checked::before {
     }
   }
 }
+//! 420px
