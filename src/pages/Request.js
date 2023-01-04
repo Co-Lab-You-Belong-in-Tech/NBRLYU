@@ -105,7 +105,7 @@ function Request() {
           {/* <fieldset>
           <label htmlFor="">Upload photo (jpeg., tiff., png.) 🖇️</label>
         </fieldset> */}
-          <div className="button-box">
+          <div className="request-button-box">
             <button onClick={handleSubmit}>Submit</button>
             <button onClick={handleCancel}>Cancel</button>
           </div>
