@@ -52,7 +52,7 @@ function Results() {
             <p>Email: someone@needshelp.com</p>
           </div>
         </div>
-        <div className="button-box">
+        <div className="result-button-box">
           <button onClick={goHome}>Done! I have all the info I need</button>
         </div>
       </div>
