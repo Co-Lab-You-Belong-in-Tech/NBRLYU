@@ -13,6 +13,10 @@ textarea {
   border-radius: 10px 10px 10px 10px;
 }
 input[type="checkbox"] {
+  appearance: none;
+  background-color: $background;
+  margin: 0;
+  font: inherit;
   color: $text;
   height: 1.15em;
   width: 1.15em;
