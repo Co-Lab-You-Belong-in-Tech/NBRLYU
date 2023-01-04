@@ -15,23 +15,23 @@
     width: auto;
   }
 }
+.result-button-box {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  button {
+    margin-bottom: 20px;
+  }
+}
 // !Media Queries
 // !780px
 @media (max-width: 780px) {
   .result-box {
+    flex-direction: column;
     img {
-      height: 20vh;
+      width: 100%;
     }
   }
 }
 
 // !420px
-@media (max-width: 420px) {
-  .result-box {
-    flex-direction: column;
-    img {
-      width: 100%;
-      height: auto;
-    }
-  }
-}
