@@ -35,22 +35,22 @@ function Provide() {
             <p>(Or more if you have the time)</p>
             <div className="task-choices">
               <div className="each-task">
-                <input type="checkbox" />
-                <label htmlFor="">
+                <input id="cooking" type="checkbox" />
+                <label htmlFor="cooking">
                   <img src={cooking} alt="graphic of cooking" />
                   <p>Cooking</p>
                 </label>
               </div>
               <div className="each-task">
-                <input type="checkbox" />
-                <label htmlFor="">
+                <input id="cleaning" type="checkbox" />
+                <label htmlFor="cleaning">
                   <img src={cleaning} alt="graphic of cleaning" />
                   <p>Cleaning</p>
                 </label>
               </div>
               <div className="each-task">
-                <input type="checkbox" />
-                <label htmlFor="">
+                <input id="yardwork" type="checkbox" />
+                <label htmlFor="yardwork">
                   <img src={yard} alt="graphic of yard work" />
                   <p>Yard Work</p>
                 </label>
