@@ -34,7 +34,7 @@ function Provide() {
       } else {
         console.log(selectedCategory);
         console.log(rad);
-        const dbRef = ref(db, `${selectedCategory}`);
+        dbRef = ref(db, `${selectedCategory}`);
         onValue(dbRef, (snapshot) => {
           console.log(snapshot.val());
         });
