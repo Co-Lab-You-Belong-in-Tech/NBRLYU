@@ -6,9 +6,9 @@ import cleaning from "../assets/cleaning.jpg";
 import yard from "../assets/yard.jpg";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import firebase from "../firebase";
-//import { db } from "../firebase";
-import { ref, get, getDatabase, onValue } from "firebase/database";
+//import firebase from "../firebase";
+import { db } from "../firebase";
+import { ref, onValue } from "firebase/database";
 
 function Provide() {
   const [zipCode, setZipCode] = useState("");
@@ -16,8 +16,7 @@ function Provide() {
   const [cleaningCb, setCleaningCb] = useState(false);
   const [yardworkCb, setYardworkCb] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState("");
-  //const dbRef = ref(db);
-  const database = getDatabase(firebase);
+  const dbRef = ref(db);
   const navigate = useNavigate();
   const handleCancel = () => {
     navigate("/");
@@ -27,16 +26,15 @@ function Provide() {
     if (zipCode.length !== 5 && zipCode !== /^[0-9\b]+$/) {
       alert("Please enter a valid zip code!");
     } else {
-      let zipcodes = require("zipcodes");
-      let rad = zipcodes.radius(zipCode, 5);
-      //console.log(rad);
-      // localStorage.setItem(rad, JSON.stringify(rad));
+      let zipcode = require("zipcodes");
+      let rad = zipcode.radius(zipCode, 5);
+
       if (cookingCb === false && cleaningCb === false && yardworkCb === false) {
         alert("Please select at least one category!");
       } else {
         console.log(selectedCategory);
         console.log(rad);
-        const dbRef = ref(database, `${selectedCategory}`);
+        const dbRef = ref(db, `${selectedCategory}`);
         onValue(dbRef, (snapshot) => {
           console.log(snapshot.val());
         });
@@ -58,7 +56,7 @@ function Provide() {
             </label>
             <input
               id="zip-code"
-              type="text"
+              type="number"
               value={zipCode}
               onChange={(e) => {
                 setZipCode(e.target.value);
