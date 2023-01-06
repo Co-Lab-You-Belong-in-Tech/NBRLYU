@@ -22,13 +22,7 @@ function Provide() {
           <h3>Help your neighbor in your area of expertise</h3>
           <fieldset className="zip-code">
             <label htmlFor="zip-code">Enter your zipcode</label>
-            <input
-              id="zip-code"
-              type="text"
-              required
-              // inputMode="numeric"
-              pattern="^(?(^00000(| -0000)) | (\d{5}(| -\d{4})))$"
-            />
+            <input id="zip-code" type="number" min="0" required />
           </fieldset>
           <fieldset className="task-category">
             <p>Select a task category</p>
@@ -68,8 +62,3 @@ function Provide() {
   );
 }
 export default Provide;
-
-//? Pseudo Code
-//? Need an geolocation API to generate all zip codes within the 5 miles radius of the zip code entered in search input area
-//? All these zip codes would be used to match any zip codes in the forms' zip codes in the database
-//! Warning: a tag doesn't work in React, try Link or something else clickable

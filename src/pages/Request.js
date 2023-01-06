@@ -84,9 +84,8 @@ function Request() {
             <label htmlFor="zip">Zip Code ⁕</label>
             <input
               id="zip"
-              type="text"
-              inputMode="numeric"
-              // pattern="^(?(^00000(| -0000)) | (\d{5}(| -\d{4})))$"
+              type="number"
+              min="0"
               value={zipCode}
               onChange={(e) => setZipCode(e.target.value)}
               required
