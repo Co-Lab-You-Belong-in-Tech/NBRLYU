@@ -1,14 +1,14 @@
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { zipcodes } from "zipcodes";
 import cooking from "../assets/cooking.jpg";
 import cleaning from "../assets/cleaning.jpg";
 import yard from "../assets/yard.jpg";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-//import firebase from "../firebase";
-import { db } from "../firebase";
-import { ref, onValue } from "firebase/database";
+import firebase from "../firebase";
+
+import { ref, onValue, getDatabase } from "firebase/database";
 
 function Provide() {
   const [zipCode, setZipCode] = useState("");
@@ -16,7 +16,7 @@ function Provide() {
   const [cleaningCb, setCleaningCb] = useState(false);
   const [yardworkCb, setYardworkCb] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState("");
-  const dbRef = ref(db);
+  const database = getDatabase(firebase);
   const navigate = useNavigate();
   const handleCancel = () => {
     navigate("/");
@@ -32,92 +32,97 @@ function Provide() {
       if (cookingCb === false && cleaningCb === false && yardworkCb === false) {
         alert("Please select at least one category!");
       } else {
-        console.log(selectedCategory);
-        console.log(rad);
-        dbRef = ref(db, `${selectedCategory}`);
+        //console.log(selectedCategory);
+        //console.log(rad);
+        const dbRef = ref(database, `${selectedCategory}`);
         onValue(dbRef, (snapshot) => {
-          console.log(snapshot.val());
+          const categorizedReqs = snapshot.val();
+          console.log(categorizedReqs);
+          const matchingReqs = rad.filter((matchingReq) =>
+            categorizedReqs.hasOwnProperty(matchingReq)
+          );
+
+          console.log(categorizedReqs[matchingReqs]);
+
+          //localStorage.setItem("matchedReqs", localData);
         });
       }
-    }
-    // else navigate("/results");
-  };
 
-  return (
-    <div className="page-wrapper">
-      <div className="wrapper">
-        <Header />
-        <form>
-          <h2>Pass on the neighborly goodness</h2>
-          <h3>Help your neighbor in your area of expertise</h3>
-          <fieldset className="zip-code">
-            <label required htmlFor="zip-code">
-              Enter your zipcode ⁕
-            </label>
-            <input
-              id="zip-code"
-              type="number"
-              value={zipCode}
-              onChange={(e) => {
-                setZipCode(e.target.value);
-              }}
-              required
-            />
-          </fieldset>
-          <fieldset className="task-category">
-            <p>Select a task category ⁕</p>
-            <p>(Or more if you have the time)</p>
-            <div className="task-choices">
-              <div className="each-task">
-                <input
-                  id="cooking"
-                  type="checkbox"
-                  onClick={() => setCookingCb(!cookingCb)}
-                  onChange={(e) => setSelectedCategory(e.target.id)}
-                />
-                <label htmlFor="cooking">
-                  <img src={cooking} alt="graphic of cooking" />
-                  <p>Cooking</p>
-                </label>
+      // else navigate("/results");
+    }
+
+    return (
+      <div className="page-wrapper">
+        <div className="wrapper">
+          <Header />
+          <form>
+            <h2>Pass on the neighborly goodness</h2>
+            <h3>Help your neighbor in your area of expertise</h3>
+            <fieldset className="zip-code">
+              <label required htmlFor="zip-code">
+                Enter your zipcode ⁕
+              </label>
+              <input
+                id="zip-code"
+                type="number"
+                value={zipCode}
+                onChange={(e) => {
+                  setZipCode(e.target.value);
+                }}
+                required
+              />
+            </fieldset>
+            <fieldset className="task-category">
+              <p>Select a task category ⁕</p>
+              <p>(Or more if you have the time)</p>
+              <div className="task-choices">
+                <div className="each-task">
+                  <input
+                    id="cooking"
+                    type="checkbox"
+                    onClick={() => setCookingCb(!cookingCb)}
+                    onChange={(e) => setSelectedCategory(e.target.id)}
+                  />
+                  <label htmlFor="cooking">
+                    <img src={cooking} alt="graphic of cooking" />
+                    <p>Cooking</p>
+                  </label>
+                </div>
+                <div className="each-task">
+                  <input
+                    id="cleaning"
+                    type="checkbox"
+                    onClick={() => setCleaningCb(!cleaningCb)}
+                    onChange={(e) => setSelectedCategory(e.target.id)}
+                  />
+                  <label htmlFor="cleaning">
+                    <img src={cleaning} alt="graphic of cleaning" />
+                    <p>Cleaning</p>
+                  </label>
+                </div>
+                <div className="each-task">
+                  <input
+                    id="yardwork"
+                    type="checkbox"
+                    onClick={() => setYardworkCb(!yardworkCb)}
+                    onChange={(e) => setSelectedCategory(e.target.id)}
+                  />
+                  <label htmlFor="yardwork">
+                    <img src={yard} alt="graphic of yard work" />
+                    <p>Yard Work</p>
+                  </label>
+                </div>
               </div>
-              <div className="each-task">
-                <input
-                  id="cleaning"
-                  type="checkbox"
-                  onClick={() => setCleaningCb(!cleaningCb)}
-                  onChange={(e) => setSelectedCategory(e.target.id)}
-                />
-                <label htmlFor="cleaning">
-                  <img src={cleaning} alt="graphic of cleaning" />
-                  <p>Cleaning</p>
-                </label>
-              </div>
-              <div className="each-task">
-                <input
-                  id="yardwork"
-                  type="checkbox"
-                  onClick={() => setYardworkCb(!yardworkCb)}
-                  onChange={(e) => setSelectedCategory(e.target.id)}
-                />
-                <label htmlFor="yardwork">
-                  <img src={yard} alt="graphic of yard work" />
-                  <p>Yard Work</p>
-                </label>
-              </div>
-            </div>
-          </fieldset>
-        </form>
-        <div className="button-box">
-          <button onClick={handleSubmit}>Submit</button>
-          <button onClick={handleCancel}>Cancel</button>
+            </fieldset>
+          </form>
+          <div className="button-box">
+            <button onClick={handleSubmit}>Submit</button>
+            <button onClick={handleCancel}>Cancel</button>
+          </div>
         </div>
+        <Footer />
       </div>
-      <Footer />
-    </div>
-  );
+    );
+  };
 }
 export default Provide;
-
-//? Pseudo Code
-//? Need an geolocation API to generate all zip codes within the 5 miles radius of the zip code entered in search input area
-//? All these zip codes would be used to match any zip codes in the forms' zip codes in the database
