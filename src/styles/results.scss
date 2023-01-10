@@ -4,7 +4,7 @@
   padding: 20px;
   background-color: $formDisplayBg;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   gap: 5%;
   margin-bottom: 50px;
   h3 {
@@ -13,5 +13,8 @@
   img {
     height: 30vh;
     width: auto;
+  }
+  .result-text {
+    width: 70%;
   }
 }
