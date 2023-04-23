@@ -14,19 +14,7 @@ import Warning from "./pages/Warning";
 import Error from "./pages/Error";
 
 function App() {
-  // useEffect(() => {
-  //   const database = getDatabase(firebase);
-  //   const dbRef = ref(database);
-  //   get(dbRef)
-  //     .then((snapshot) => {
-  //       if (snapshot.exists()) {
-  //         const data = snapshot.val();
-  //       }
-  //     })
-  //     .catch((error) => {
-  //       alert("There is no request matches your search. Please try again!");
-  //     });
-  // }, []);
+  //localStorage.clear();
 
   return (
     <div>
@@ -45,12 +33,3 @@ function App() {
 }
 
 export default App;
-
-//! on hold codes for conditional rendering
-// const [selectedRequest, setSelectedRequest] = useState(false);
-// const [selectedProvide, setSelectedProvide] = useState(false);
-
-//TODO: Add Routes and Route
-//TODO: Add Sitemap for SEO
-//TODO: Add firebase
-//TODO: Use Checkbox for multiple selections from provider side

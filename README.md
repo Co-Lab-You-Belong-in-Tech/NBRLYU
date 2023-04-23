@@ -1,70 +1,63 @@
 # NBRLYU
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The NBRLYU Web App is a website designed to foster a sense of community and belonging among neighbors by enabling them to perform small acts of kindness for each other. The app aims to reduce loneliness and social isolation by creating opportunities for neighbors to connect with each other in meaningful ways.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+    Post requests for help or offer to help your neighbors with tasks such as cooking, cleaning, or yard work
 
-### `npm start`
+    Connect with other neighbors and build relationships through acts of kindness
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+    Receive notifications when someone offers to help you or accepts your offer to help
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+    Keep track of your acts of kindness and see how you're contributing to your community
 
-### `npm test`
+### Technologies Used
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The NBRLYU Web App is built using the following technologies:
+Frontend: HTML, CSS/SASS, JavaScript, React
+Backend: Firebase
 
-### `npm run build`
+### Getting Started
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clone the repository:
+   git clone https://github.com/your-username/nbrlyu.git
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. Install the dependencies:
+   npm install
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. Set up a Firebase project and database:
+   Go to the Firebase Console and create a new project.
 
-### `npm run eject`
+   In the project overview page, click on "Add app" to add a new web app to your project.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+   Follow the instructions to register your app and obtain your Firebase configuration credentials.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   In the project overview page, click on "Firestore Database" to create a new Cloud Firestore database.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+   Follow the instructions to set up your database rules and security settings.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+4. Add your Firebase configuration credentials to your app:
+   Create a new file in your project's root directory called .env.local.
 
-## Learn More
+   Copy the contents of the .env.example file and paste it into the .env.local file.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+   Replace the values of the REACT_APP_FIREBASE_API_KEY, REACT_APP_FIREBASE_AUTH_DOMAIN, REACT_APP_FIREBASE_PROJECT_ID, and REACT_APP_FIREBASE_APP_ID variables with your Firebase configuration credentials.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+5. Start the development server:
+   npm run dev
 
-### Code Splitting
+6. Open the app in your browser:
+   http://localhost:3000
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Contributing
 
-### Analyzing the Bundle Size
+Contributions are welcome! If you'd like to contribute to the Neighbors Kindness Web App, please follow these steps:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+    Fork the repository
+    Create a new branch
+    Make your changes and commit them
+    Push your changes to your fork
+    Create a pull request
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### License

@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
-import { zipcodes } from "zipcodes";
+//import { zipcodes } from "zipcodes";
 import cooking from "../assets/cooking.jpg";
 import cleaning from "../assets/cleaning.jpg";
 import yard from "../assets/yard.jpg";
@@ -42,10 +42,10 @@ function Provide() {
             categorizedReqs.hasOwnProperty(matchingReq)
           );
 
-          console.log(categorizedReqs[matchingReqs]);
+          //console.log(categorizedReqs[matchingReqs]);
           const toLocalData = categorizedReqs[matchingReqs];
-          // console.log(toLocalData);
-          sessionStorage.setItem("matchedReqs", JSON.stringify(toLocalData));
+          console.log(toLocalData);
+          localStorage.setItem("matchedReqs", JSON.stringify(toLocalData));
         });
         navigate("/results");
       }
