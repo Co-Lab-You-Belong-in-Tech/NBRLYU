@@ -4,13 +4,19 @@
 # 📘Table of Contents
 ## :writing_hand: Description
 ### NBRLYU 
-is a website that allows neighbors to perform small acts of kindness for each other. It is intended to reduce loneliness and social isolation among neighbors and build a sense of community and belonging.
+The NBRLYU Web App is a website designed to foster a sense of community and belonging among neighbors by enabling them to perform small acts of kindness for each other. The app aims to reduce loneliness and social isolation by creating opportunities for neighbors to connect with each other in meaningful ways.
+
+## 🏗️Features
+### 📝Post requests for help or offer to help your neighbors with tasks such as cooking, cleaning, or yard work
+### 🤝Connect with other neighbors and build relationships through acts of kindness
+### 📲Receive notifications when someone offers to help you or accepts your offer to help
+### 📈Keep track of your acts of kindness and seeing how you're contributing to your community
 
 ## 🧰 Built With
 
-⚛️React.js
+### Front-end: HTML, CSS/SASS, JavaScript, React
 
-🔥Firebase
+### Back-end: Firebase
 
 
 
