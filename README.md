@@ -73,17 +73,17 @@
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- LIVE DEMO -->
-<!--
+
 ## 🚀 Live Demo <a name="live-demo"></a>
 
 - [Live Demo Link](https://yourdeployedapplicationlink.com)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
--->
+
 
 <!-- GETTING STARTED -->
-<!--
+
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
@@ -111,8 +111,8 @@ Clone this repository to your desired folder:
 
 
 ```sh
-  cd closer
-  git clone https://github.com/Co-Lab-You-Belong-in-Tech/closer.git
+  cd nbrlyu
+  git clone https://github.com/Co-Lab-You-Belong-in-Tech/NBRLYU.git
 ```
 
 ### Install
@@ -163,22 +163,21 @@ To run the backend of the project, execute the following command:
 
 To run tests, run the following command:
 
-<!--
+
 Example command:
 ```sh
   bin/rails test test/models/article_test.rb
 ```
---->
 
 ### Deployment
 
 You can deploy this project using:
 
-<!--
+
 Example:
 ```sh
 ```
- -->
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -253,7 +252,7 @@ I would like to thank the following people for their support and guidance:
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- LICENSE -->
-<!--
+
 
 ## 📝 License <a name="license"></a>
 
@@ -264,7 +263,6 @@ _NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/
 <p align=
 "right">(<a href="#readme-top">back to top</a>)</p>
 Footer
--->
 
 
 
