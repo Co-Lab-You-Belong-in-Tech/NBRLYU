@@ -73,6 +73,7 @@
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- LIVE DEMO -->
+<!--
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
@@ -80,10 +81,10 @@
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
+-->
 
 <!-- GETTING STARTED -->
-
+<!--
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
@@ -180,6 +181,7 @@ Example:
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+-->
 
 <!-- AUTHORS -->
 
@@ -210,7 +212,7 @@ Example:
 
 Contributions, issues, and feature requests are welcome!
 
-- Clone the repo with the command `git clone https://github.com/Co-Lab-You-Belong-in-Tech/closer.git`
+- Clone the repo with the command `git clone https://github.com/Co-Lab-You-Belong-in-Tech/NBRLYU.git`
 - Pick an issue from the [issues page](../../issues/) and assign it to yourself
 - Create your own branch from develop, eg feat/
 - Ensure your branch is up to date with latest changes before pushing
@@ -253,7 +255,7 @@ I would like to thank the following people for their support and guidance:
 
 <!-- LICENSE -->
 
-
+<!--
 ## 📝 License <a name="license"></a>
 
 This project is [MIT](./LICENSE) licensed.
