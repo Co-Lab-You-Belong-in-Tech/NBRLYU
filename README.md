@@ -13,7 +13,7 @@
 # 📗 Table of Contents
 
 - [📗 Table of Contents](#-table-of-contents)
-- [📖 NBRLYU](#-nbrlyu-)
+- [🏘️ NBRLYU](#-nbrlyu-)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
@@ -64,19 +64,26 @@
 
 ### Key Features <a name="key-features"></a>
 
-- **Conflict de-escalation cycle**
+- **Post requests for help or offer to help your neighbors with tasks such as cooking, cleaning, or yard work**
+- **Connect with other neighbors and build relationships through acts of kindness**
+- **Receive notifications when someone offers to help you or accepts your offer to help**
+
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- LIVE DEMO -->
-
+<!--
 ## 🚀 Live Demo <a name="live-demo"></a>
 
 - [Live Demo Link](https://yourdeployedapplicationlink.com)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+-->
+
 <!-- GETTING STARTED -->
+<!--
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
@@ -177,18 +184,14 @@ Example:
 
 <!-- AUTHORS -->
 
-## 👥 Authors <a name="authors"></a>
+## 👥 Author <a name="authors"></a>
 
-👤 **Jingru Xu**
+👤 **Chris West**
 
-- GitHub: [@jxu710](https://github.com/jxu710)
-- LinkedIn: [Jingru Xu](https://www.linkedin.com/in/jingru-xu/)
+- GitHub: [@Westc13](https://github.com/Westc13)
+- LinkedIn: [Chris West](https://www.linkedin.com/in/chris-west-code-wrangler/)
 
-👤 **Ricky Mormor**
 
-- GitHub: [@cwaku](https://github.com/cwaku)
-- Twitter: [@rickymormor](https://twitter.com/rickymormor)
-- LinkedIn: [Ricky Mormor](https://github.com/cwaku/blog/blob/develop/www.linkedin.com/in/rickymormor)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -231,8 +234,8 @@ Give a ⭐️ if you like this project!
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
 I would like to thank the following people for their support and guidance:
-- [Ingrid]()
-- [Grace]()
+- []()
+- []()
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -250,6 +253,7 @@ I would like to thank the following people for their support and guidance:
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- LICENSE -->
+<!--
 
 ## 📝 License <a name="license"></a>
 
@@ -260,25 +264,10 @@ _NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/
 <p align=
 "right">(<a href="#readme-top">back to top</a>)</p>
 Footer
+-->
 
 
 
-## 🏗️Features
-### 📝Post requests for help or offer to help your neighbors with tasks such as cooking, cleaning, or yard work
-### 🤝Connect with other neighbors and build relationships through acts of kindness
-### 📲Receive notifications when someone offers to help you or accepts your offer to help
-### 📈Keep track of your acts of kindness and seeing how you're contributing to your community
-
-## 🧰 Built With
-
-### Front-end: HTML, CSS/SASS, JavaScript, React
-
-### Back-end: Firebase
-
-## 🚀 Getting Started
-
-### To get started with the NBRLYU Web App, follow these steps:
-#### 1. Clone the repository to your local machine:
 
 
 
