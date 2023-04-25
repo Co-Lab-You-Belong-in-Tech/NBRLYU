@@ -1,70 +1,273 @@
-# NBRLYU
+<a name="readme-top"></a>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<div align="center">
 
-## Available Scripts
+  <img width="548" alt="logo" src="https://github.com/Co-Lab-You-Belong-in-Tech/NBRLYU/blob/main/src/assets/logo.png" width="140"  height="auto" >
 
-In the project directory, you can run:
+  <br/>
 
-### `npm start`
+</div>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<!-- TABLE OF CONTENTS -->
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# 📗 Table of Contents
 
-### `npm test`
+- [📗 Table of Contents](#-table-of-contents)
+- [🏘️ NBRLYU](#-nbrlyu-)
+  - [🛠 Built With ](#-built-with-)
+    - [Tech Stack ](#tech-stack-)
+    - [Key Features ](#key-features-)
+  - [🚀 Live Demo ](#-live-demo-)
+  - [💻 Getting Started ](#-getting-started-)
+    - [Prerequisites](#prerequisites)
+    - [Setup](#setup)
+    - [Install](#install)
+    - [Usage](#usage)
+    - [Run tests](#run-tests)
+    - [Deployment](#deployment)
+  - [👥 Authors ](#-authors-)
+  - [🔭 Future Features ](#-future-features-)
+  - [🤝 Contributing ](#-contributing-)
+  - [⭐️ Show your support ](#️-show-your-support-)
+  - [🙏 Acknowledgments ](#-acknowledgments-)
+  - [❓ FAQ ](#-faq-)
+  - [📝 License ](#-license-)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<!-- PROJECT DESCRIPTION -->
 
-### `npm run build`
+# 📖 NBRLYU <a name="about-project"></a>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**NBRLYU** is a website designed to foster a sense of community and belonging among neighbors by enabling them to perform small acts of kindness for each other. The app aims to reduce loneliness and social isolation by creating opportunities for neighbors to connect with each other in meaningful ways.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🛠 Built With <a name="built-with"></a>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Tech Stack <a name="tech-stack"></a>
 
-### `npm run eject`
+<details>
+  <summary>Frontend</summary>
+  <ul>
+    <li><a href="">HTML</a></li>
+    <li><a href="">CSS/SASS</a></li>
+    <li><a href="">Javascript</a></li>
+    <li><a href="https://reactjs.org/">React.js</a></li>
+   </ul>
+</details>
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+<details>
+  <summary>Backend</summary>
+  <ul>
+    <li><a href="">Firebase</a></li>
+  </ul>
+</details>
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<!-- Features -->
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Key Features <a name="key-features"></a>
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- **Post requests for help or offer to help your neighbors with tasks such as cooking, cleaning, or yard work**
+- **Connect with other neighbors and build relationships through acts of kindness**
+- **Receive notifications when someone offers to help you or accepts your offer to help**
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### Code Splitting
+<!-- LIVE DEMO -->
+<!--
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 🚀 Live Demo <a name="live-demo"></a>
 
-### Analyzing the Bundle Size
+- [Live Demo Link](https://yourdeployedapplicationlink.com)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### Making a Progressive Web App
+-->
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+<!-- GETTING STARTED -->
+<!--
 
-### Advanced Configuration
+## 💻 Getting Started <a name="getting-started"></a>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+To get a local copy up and running, follow these steps.
+
+### Prerequisites
+
+In order to run this project you need:
+
+
+```sh
+- Ruby
+- Ruby on Rails
+- PostgreSQL
+- Node.js
+- npm
+- Ionic CLI
+- IDE (VSCode, Xcode, Android Studio)
+```
+
+
+### Setup
+
+Clone this repository to your desired folder:
+
+
+```sh
+  cd nbrlyu
+  git clone https://github.com/Co-Lab-You-Belong-in-Tech/NBRLYU.git
+```
+
+### Install
+
+Install the frontend with:
+
+
+```sh
+  
+```
+- 
+
+
+Install the backend with:
+
+
+```sh
+  
+```
+- 
+
+### Usage
+
+
+To run the frontend of the project, execute the following command:
+
+```sh
+  cd closer
+  npm install
+  npm start
+```
+- Navigate to the app on your browser with the url `http://localhost:****` where **** is the port number displayed on your terminal.
+
+To run the backend of the project, execute the following command:
+
+```sh
+  cd closer
+  cd backend
+  bundle install
+  rails db:create
+  rails db:migrate
+  rails db:seed
+  rails s
+```
+- Navigate to the app on your browser with the url `http://localhost:****` where **** is the port number displayed on your terminal.
+
+### Run tests
+
+To run tests, run the following command:
+
+
+Example command:
+```sh
+  bin/rails test test/models/article_test.rb
+```
 
 ### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+You can deploy this project using:
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Example:
+```sh
+```
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+-->
+
+<!-- AUTHORS -->
+
+## 👥 Author <a name="authors"></a>
+
+👤 **Chris West**
+
+- GitHub: [@Westc13](https://github.com/Westc13)
+- LinkedIn: [Chris West](https://www.linkedin.com/in/chris-west-code-wrangler/)
+
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- FUTURE FEATURES -->
+
+## 🔭 Future Features <a name="future-features"></a>
+
+<!-- - [ ] **[new_feature_1]**
+- [ ] **[new_feature_2]**
+- [ ] **[new_feature_3]** -->
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- CONTRIBUTING -->
+
+## 🤝 Contributing <a name="contributing"></a>
+
+Contributions, issues, and feature requests are welcome!
+
+- Clone the repo with the command `git clone https://github.com/Co-Lab-You-Belong-in-Tech/NBRLYU.git`
+- Pick an issue from the [issues page](../../issues/) and assign it to yourself
+- Create your own branch from develop, eg feat/
+- Ensure your branch is up to date with latest changes before pushing
+- Create a pull request against develop branch
+- Reference the issue you worked on in your PR
+- Wait for your PR to be reviewed and merged
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- SUPPORT -->
+
+## ⭐️ Show your support <a name="support"></a>
+
+Give a ⭐️ if you like this project!
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- ACKNOWLEDGEMENTS -->
+
+## 🙏 Acknowledgments <a name="acknowledgements"></a>
+
+I would like to thank the following people for their support and guidance:
+- []()
+- []()
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- FAQ (optional) -->
+
+## ❓ FAQ <a name="faq"></a>
+
+<!-- > Add at least 2 questions new developers would ask when they decide to use your project. -->
+
+<!-- - **[Question_1]**
+  - [Answer_1]
+- **[Question_2]**
+  - [Answer_2] -->
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- LICENSE -->
+
+<!--
+## 📝 License <a name="license"></a>
+
+This project is [MIT](./LICENSE) licensed.
+
+_NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
+
+<p align=
+"right">(<a href="#readme-top">back to top</a>)</p>
+Footer
+
+
+
+
+
+
