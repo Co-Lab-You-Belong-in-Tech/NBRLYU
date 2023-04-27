@@ -235,8 +235,8 @@ Give a ⭐️ if you like this project!
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
 I would like to thank the following people for their support and guidance:
-- []()
-- []()
+- [Siobhan Özege - project mentor]()
+- [Jason Zheng - developer mentor]()
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -255,7 +255,7 @@ I would like to thank the following people for their support and guidance:
 
 <!-- LICENSE -->
 
-<!--
+
 ## 📝 License <a name="license"></a>
 
 This project is [MIT](./LICENSE) licensed.
@@ -264,7 +264,6 @@ _NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/
 
 <p align=
 "right">(<a href="#readme-top">back to top</a>)</p>
-Footer
 
 
 
