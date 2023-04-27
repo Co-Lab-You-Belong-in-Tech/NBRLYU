@@ -84,7 +84,6 @@
 -->
 
 <!-- GETTING STARTED -->
-<!--
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
@@ -96,13 +95,11 @@ In order to run this project you need:
 
 
 ```sh
-- Ruby
-- Ruby on Rails
-- PostgreSQL
+- React.js
+- Firebase
 - Node.js
 - npm
-- Ionic CLI
-- IDE (VSCode, Xcode, Android Studio)
+- IDE (VSCode)
 ```
 
 
@@ -141,12 +138,13 @@ Install the backend with:
 To run the frontend of the project, execute the following command:
 
 ```sh
-  cd closer
+  cd nbrlyu
   npm install
   npm start
 ```
 - Navigate to the app on your browser with the url `http://localhost:****` where **** is the port number displayed on your terminal.
 
+<!-- 
 To run the backend of the project, execute the following command:
 
 ```sh
@@ -159,7 +157,9 @@ To run the backend of the project, execute the following command:
   rails s
 ```
 - Navigate to the app on your browser with the url `http://localhost:****` where **** is the port number displayed on your terminal.
+-->
 
+<!--
 ### Run tests
 
 To run tests, run the following command:
@@ -169,7 +169,7 @@ Example command:
 ```sh
   bin/rails test test/models/article_test.rb
 ```
-
+-->
 ### Deployment
 
 You can deploy this project using:
@@ -181,7 +181,7 @@ Example:
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
--->
+
 
 <!-- AUTHORS -->
 
